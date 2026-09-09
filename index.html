@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bird Crime — Fantasy Football League</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="site-header" class="site-header"></header>
+
+<main>
+  <div class="wrap">
+
+    <h1 class="page-title">Bird Crime</h1>
+
+    <section class="section-wrap" aria-labelledby="champions-head">
+      <div class="section-banner" id="champions-head">Hall of Champions</div>
+      <div class="pennant-band">
+        <div id="pennant-row" class="pennant-row">
+          <p class="loading-note">Loading…</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap" aria-labelledby="glance-head">
+      <div class="section-banner" id="glance-head">League at a Glance</div>
+      <div id="glance-cols" class="glance-cols">
+        <p class="loading-note">Loading…</p>
+      </div>
+    </section>
+
+    <section class="section-wrap" aria-labelledby="history-head">
+      <div class="section-banner" id="history-head">League History <span class="tag">Podium Finishers</span></div>
+      <div id="history-table-wrap" class="table-card card">
+        <p class="loading-note">Loading…</p>
+      </div>
+    </section>
+
+    <section class="section-wrap" aria-labelledby="shame-head">
+      <div class="section-banner" id="shame-head">Wall of Shame <span class="tag">Last Place Finishers</span></div>
+      <div id="shame-table-wrap" class="table-card card shame-card">
+        <p class="loading-note">Loading…</p>
+      </div>
+    </section>
+
+    <section class="section-wrap" aria-labelledby="superlatives-head">
+      <div class="section-banner" id="superlatives-head">League Superlatives</div>
+      <div id="superlatives-table-wrap" class="table-card card">
+        <p class="loading-note">Loading…</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/main.js"></script>
+<script src="js/data.js"></script>
+<script>
+function fmtNum(value, decimals = 2) {
+  if (value == null || Number.isNaN(value)) return "—";
+  return value.toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+}
+
+// Superlative "display_name" values are joined with " & " for ties (from the data
+// pipeline). For 3+ way ties, reformat as "N-way tie (A, B, C)" instead of a long
+// ampersand chain — for 1 or 2 names, leave as-is.
+function formatTieName(displayName) {
+  const names = displayName.split(" & ");
+  if (names.length <= 2) return displayName;
+  return `${names.length}-way tie (${names.join(", ")})`;
+}
+
+(async function () {
+  initChrome("index.html");
+
+  const pennantEl = document.getElementById("pennant-row");
+  const glanceEl = document.getElementById("glance-cols");
+  const historyEl = document.getElementById("history-table-wrap");
+  const shameEl = document.getElementById("shame-table-wrap");
+  const superEl = document.getElementById("superlatives-table-wrap");
+
+  let data;
+  try {
+    data = await loadLeagueData();
+  } catch (err) {
+    [pennantEl, glanceEl, historyEl, shameEl, superEl].forEach(el => showError(el));
+    return;
+  }
+
+  const { managers, summary, seasons, allSeasons } = data;
+  const completedSeasons = allSeasons.filter(s => seasons[s] && seasons[s].champion_roster_id != null);
+
+  let efficiencyData = { career: {} };
+  try {
+    const res = await fetch("data/lineup_efficiency.json");
+    if (res.ok) efficiencyData = await res.json();
+  } catch (e) { /* not generated yet */ }
+
+  if (completedSeasons.length === 0) {
+    pennantEl.innerHTML = "";
+  } else {
+    pennantEl.innerHTML = completedSeasons.slice().reverse().map(season => {
+      const info = summary.champions_by_year[season];
+      return `
+        <div class="pennant">
+          <div class="rod"></div>
+          <div class="flag">
+            <div class="year">${season}</div>
+            <div class="team">"${info.team_name}"</div>
+            <div class="manager">${info.display_name}</div>
+            <div class="record">${info.record}</div>
+          </div>
+        </div>
+      `;
+    }).join("");
+  }
+
+  const settingsRows = `
+    <tr><td>League</td><td>Bird Crime</td></tr>
+    <tr><td>Teams</td><td>12</td></tr>
+    <tr><td>Scoring</td><td>Superflex, Half-PPR, TE Premium</td></tr>
+    <tr><td>Starting Lineup</td><td>QB, 2 RB, 2 WR, TE, 3 FLEX, 1 SFLX</td></tr>
+    <tr><td>Bench / IR / Taxi</td><td>15 / 3 / 4</td></tr>
+    <tr><td>Playoffs</td><td>Top 6 teams, Weeks 15&ndash;17</td></tr>
+    <tr><td>Trade Deadline</td><td>Week 14</td></tr>
+    <tr><td>Waivers</td><td>FAAB, $200 budget</td></tr>
+  `;
+
+  const champRows = summary.championships_table.length
+    ? summary.championships_table.map(c => `
+        <tr><td>${c.display_name}${c.is_current ? "" : ' <span class="badge retired">RETIRED</span>'}</td><td>${c.titles}</td><td>${c.years.join(", ")}</td></tr>
+      `).join("")
+    : `<tr><td colspan="3">No champions yet.</td></tr>`;
+
+  glanceEl.innerHTML = `
+    <div class="table-card card"><table><tbody>${settingsRows}</tbody></table></div>
+    <div class="table-card card">
+      <table>
+        <thead><tr><th>Manager</th><th>Titles</th><th>Years</th></tr></thead>
+        <tbody>${champRows}</tbody>
+      </table>
+    </div>
+  `;
+
+  if (completedSeasons.length === 0) {
+    historyEl.innerHTML = `<p class="loading-note">No seasons completed yet.</p>`;
+  } else {
+    const rows = completedSeasons.slice().reverse().map(season => {
+      const p = summary.podium_by_year[season];
+      return `<tr><td><strong>${season}</strong></td><td>${p.champion}</td><td>${p.runner_up || "—"}</td><td>${p.third || "—"}</td></tr>`;
+    }).join("");
+    historyEl.innerHTML = `
+      <table>
+        <thead><tr><th>Year</th><th>Champion</th><th>Runner-Up</th><th>Third</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    `;
+  }
+
+  if (summary.wall_of_shame.length === 0) {
+    shameEl.innerHTML = `<p class="loading-note">No seasons completed yet.</p>`;
+  } else {
+    const rows = summary.wall_of_shame.slice().reverse().map(w => `
+      <tr><td><strong>${w.season}</strong></td><td>${w.display_name}</td><td>"${w.team_name}"</td><td>${w.record}</td><td>${fmtNum(w.points_for)}</td></tr>
+    `).join("");
+    shameEl.innerHTML = `
+      <table>
+        <thead><tr><th>Year</th><th>Manager</th><th>Team</th><th>Record</th><th>Points</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    `;
+  }
+
+  let highestEfficiency = null;
+  const careerEff = efficiencyData.career || {};
+  const effEntries = Object.entries(careerEff);
+  if (effEntries.length > 0) {
+    const [topOwnerId, topEff] = effEntries.reduce((best, cur) => cur[1].efficiency_pct > best[1].efficiency_pct ? cur : best);
+    const m = managerById(managers, topOwnerId);
+    if (m) highestEfficiency = { display_name: m.display_name, value: `${topEff.efficiency_pct.toFixed(1)}%` };
+  }
+
+  const s = summary.superlatives;
+  const rows = [
+    ["Most Titles", s.most_titles],
+    ["Most Playoff Wins", s.most_playoff_wins],
+    ["Best Win %", s.best_win_pct],
+    ["Highest Career PPG", s.highest_career_ppg],
+    ["Highest Lineup Efficiency", highestEfficiency],
+    ["Best Regular Season", s.best_regular_season],
+    ["Highest Scoring Season", s.highest_scoring_season],
+  ].filter(([, entry]) => entry);
+
+  superEl.innerHTML = `
+    <table>
+      <thead><tr><th>Superlative</th><th>Manager(s)</th><th>Value</th></tr></thead>
+      <tbody>
+        ${rows.map(([label, entry]) => `<tr><td><strong>${label}</strong></td><td>${formatTieName(entry.display_name)}</td><td>${entry.value}</td></tr>`).join("")}
+      </tbody>
+    </table>
+  `;
+
+})();
+</script>
+</body>
+</html>

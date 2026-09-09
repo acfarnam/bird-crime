@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crime Report — Bird Crime</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="site-header" class="site-header"></header>
+
+<main>
+  <div class="wrap">
+    <h1 class="page-title">Crime Report</h1>
+    <p class="page-lede">Weekly updates, power rankings, and league storylines.</p>
+
+    <div id="issue-list">
+      <p class="loading-note">Loading…</p>
+    </div>
+  </div>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/main.js"></script>
+<script>
+initChrome("crime-report.html");
+
+(async function () {
+  const list = document.getElementById("issue-list");
+  let data;
+  try {
+    const res = await fetch("data/crime_report.json");
+    data = await res.json();
+  } catch (err) {
+    showError(list, "Couldn't load the Crime Report.");
+    return;
+  }
+
+  const issues = data.issues || [];
+  if (issues.length === 0) {
+    list.innerHTML = `<p class="loading-note">No issues yet.</p>`;
+    return;
+  }
+
+  function section(title, innerHtml) {
+    return `
+      <div class="report-section">
+        <div class="section-banner">${title}</div>
+        ${innerHtml}
+      </div>
+    `;
+  }
+
+  list.innerHTML = issues.map(issue => {
+    const introHtml = issue.intro ? `<p class="report-intro">${issue.intro}</p>` : "";
+
+    const recapHtml = issue.weekly_recap
+      ? section("Weekly Recap", `<div class="card report-body-text">${issue.weekly_recap}</div>`)
+      : "";
+
+    const rankingsHtml = (issue.power_rankings && issue.power_rankings.length)
+      ? section("Power Rankings", `
+          <div class="card power-rankings-post">
+            ${issue.power_rankings.map(r => `
+              <div class="pr-entry">
+                <h3 class="pr-team">${r.rank}. ${r.team} <span class="pr-manager">(${r.manager})</span></h3>
+                <p class="pr-record"><strong>2025 Record:</strong> ${r.last_record}</p>
+                <p class="pr-record"><strong>Projected 2026 Record:</strong> ${r.projected_record}</p>
+                <p class="pr-blurb">${r.blurb}</p>
+              </div>
+            `).join("")}
+          </div>
+        `)
+      : "";
+
+    const raceHtml = issue.race_for_101
+      ? section("Race for 1.01", `<div class="card report-body-text">${issue.race_for_101}</div>`)
+      : "";
+
+    const matchHtml = issue.match_of_week
+      ? section("Match of the Week", `
+          <div class="card match-card">
+            <div class="matchup">${issue.match_of_week.matchup}</div>
+            <div class="blurb">${issue.match_of_week.blurb}</div>
+            ${issue.match_of_week.poll_id ? `
+              <div class="vote-section" data-poll-id="${issue.match_of_week.poll_id}" data-team-a="${issue.match_of_week.team_a}" data-team-b="${issue.match_of_week.team_b}">
+                <div class="vote-buttons">
+                  <button class="vote-btn vote-btn-a">Vote: ${issue.match_of_week.team_a}</button>
+                  <button class="vote-btn vote-btn-b">Vote: ${issue.match_of_week.team_b}</button>
+                </div>
+                <div class="vote-results"></div>
+                <p class="vote-note">One vote per browser.</p>
+              </div>
+            ` : ""}
+          </div>
+        `)
+      : "";
+
+    return `
+      <article class="report-issue">
+        <h2 class="report-headline">${issue.headline} <span class="report-date">&ndash; ${issue.date}</span></h2>
+        ${introHtml}
+        ${recapHtml}
+        ${rankingsHtml}
+        ${raceHtml}
+        ${matchHtml}
+      </article>
+    `;
+  }).join("");
+
+  initVoting();
+})();
+
+// ---- Match of the Week voting ----
+// Uses Firebase Realtime Database's REST API directly (no SDK/import needed —
+// just fetch() calls, same as the rest of this site). Each vote is stored as
+// its own uniquely-keyed record (via Firebase's auto-ID POST) rather than a
+// simple incrementing counter, which avoids any race condition if two people
+// vote at nearly the same moment. Vote counts are PUBLIC and the database is
+// in "test mode" (open read/write, no login) — fine for a casual league poll,
+// but worth knowing if this ever needs to hold anything sensitive later.
+// "One vote per browser" is enforced via localStorage only — clearing browser
+// data or voting from another device would allow a repeat vote.
+const FIREBASE_DB_URL = "https://bird-crime-polls-default-rtdb.firebaseio.com";
+
+async function voteGet(pollId, letter) {
+  try {
+    // shallow=true returns just the auto-generated keys, not full record contents —
+    // all we need is the count. A poll with zero votes returns null (not an error).
+    const res = await fetch(`${FIREBASE_DB_URL}/votes/${pollId}/${letter}.json?shallow=true`, { cache: "no-store" });
+    if (!res.ok) {
+      console.error(`Vote GET failed for ${pollId}/${letter}: HTTP ${res.status}`);
+      return 0;
+    }
+    const data = await res.json();
+    console.log(`Vote GET ${pollId}/${letter} raw response:`, data);
+    return data ? Object.keys(data).length : 0;
+  } catch (e) {
+    console.error(`Vote GET threw for ${pollId}/${letter}:`, e);
+    return 0;
+  }
+}
+
+async function voteHit(pollId, letter) {
+  try {
+    const res = await fetch(`${FIREBASE_DB_URL}/votes/${pollId}/${letter}.json`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(Date.now()),
+    });
+    if (!res.ok) {
+      console.error(`Vote HIT failed for ${pollId}/${letter}: HTTP ${res.status}`);
+      return false;
+    }
+    const data = await res.json();
+    console.log(`Vote HIT ${pollId}/${letter} raw response:`, data);
+    return true;
+  } catch (e) {
+    console.error(`Vote HIT threw for ${pollId}/${letter}:`, e);
+    return false;
+  }
+}
+
+function renderVoteResults(section, teamA, teamB, countA, countB, votedTeamName) {
+  const total = countA + countB;
+  const pctA = total ? Math.round((countA / total) * 100) : 0;
+  const pctB = total ? 100 - pctA : 0;
+  const resultsEl = section.querySelector(".vote-results");
+  resultsEl.innerHTML = `
+    <div class="vote-result-row">
+      <div class="vote-result-label"><span>${teamA}</span><span>${countA} vote${countA === 1 ? "" : "s"} (${pctA}%)</span></div>
+      <div class="vote-result-bar-track"><div class="vote-result-bar-fill" style="width:${pctA}%;"></div></div>
+    </div>
+    <div class="vote-result-row">
+      <div class="vote-result-label"><span>${teamB}</span><span>${countB} vote${countB === 1 ? "" : "s"} (${pctB}%)</span></div>
+      <div class="vote-result-bar-track"><div class="vote-result-bar-fill" style="width:${pctB}%;"></div></div>
+    </div>
+    ${votedTeamName ? `<p class="vote-you-picked">You picked ${votedTeamName}.</p>` : ""}
+  `;
+  resultsEl.classList.add("show");
+}
+
+async function initVoteSection(section) {
+  const pollId = section.dataset.pollId;
+  const teamA = section.dataset.teamA;
+  const teamB = section.dataset.teamB;
+  const storageKey = `vote_${pollId}`;
+  const POLL_INTERVAL_MS = 12000; // re-check results periodically so other people's votes show up live
+
+  const buttonsWrap = section.querySelector(".vote-buttons");
+  const btnA = section.querySelector(".vote-btn-a");
+  const btnB = section.querySelector(".vote-btn-b");
+
+  function votedTeamName() {
+    const v = localStorage.getItem(storageKey);
+    return v === "a" ? teamA : v === "b" ? teamB : null;
+  }
+
+  async function refreshResults() {
+    if (document.hidden) return;
+    const [countA, countB] = await Promise.all([voteGet(pollId, "a"), voteGet(pollId, "b")]);
+    renderVoteResults(section, teamA, teamB, countA, countB, votedTeamName());
+  }
+
+  async function showResults() {
+    buttonsWrap.style.display = "none";
+    await refreshResults();
+  }
+
+  const existingVote = localStorage.getItem(storageKey);
+  if (existingVote) {
+    await showResults();
+  } else {
+    btnA.addEventListener("click", async () => {
+      btnA.disabled = true;
+      btnB.disabled = true;
+      await voteHit(pollId, "a");
+      localStorage.setItem(storageKey, "a");
+      await showResults();
+    });
+    btnB.addEventListener("click", async () => {
+      btnA.disabled = true;
+      btnB.disabled = true;
+      await voteHit(pollId, "b");
+      localStorage.setItem(storageKey, "b");
+      await showResults();
+    });
+  }
+
+  // Keep polling for updated results as long as this page stays open, so a vote
+  // cast by someone else shows up without needing a manual reload.
+  setInterval(() => {
+    if (section.querySelector(".vote-results").classList.contains("show")) {
+      refreshResults();
+    }
+  }, POLL_INTERVAL_MS);
+}
+
+function initVoting() {
+  document.querySelectorAll(".vote-section").forEach(initVoteSection);
+}
+</script>
+</body>
+</html>

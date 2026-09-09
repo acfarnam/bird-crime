@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rules — Bird Crime</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="site-header" class="site-header"></header>
+
+<main>
+  <div class="wrap">
+    <h1 class="page-title">Rules</h1>
+
+    <div id="rules-body">
+      <p class="loading-note">Loading…</p>
+    </div>
+  </div>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/main.js"></script>
+<script>
+initChrome("rules.html");
+
+(async function () {
+  const body = document.getElementById("rules-body");
+  let r;
+  try {
+    const res = await fetch("data/rules.json");
+    r = await res.json();
+  } catch (err) {
+    showError(body, "Couldn't load the rules file.");
+    return;
+  }
+
+  function section(title, innerHtml) {
+    return `
+      <section class="rules-section">
+        <div class="section-banner">${title}</div>
+        <div class="table-card card">${innerHtml}</div>
+      </section>
+    `;
+  }
+
+  const generalRows = r.general_settings.map(s => `<tr><td>${s.label}</td><td>${s.value}</td></tr>`).join("");
+  const generalHtml = `<table><tbody>${generalRows}</tbody></table>`;
+
+  const duesRows = r.dues_and_payouts.dues.map(d => `<tr><td>${d.label}</td><td>${d.value}</td></tr>`).join("");
+  const payoutRows = r.dues_and_payouts.payouts.map(p => `<tr><td>${p.place}</td><td>${p.amount}</td></tr>`).join("");
+  const duesHtml = `
+    <div class="glance-cols" style="padding:16px;">
+      <table><tbody>${duesRows}</tbody></table>
+      <table><thead><tr><th>Finish</th><th>Payout</th></tr></thead><tbody>${payoutRows}</tbody></table>
+    </div>
+  `;
+
+  const draftHtml = `
+    <div style="padding:20px 24px;">
+      <p style="font-weight:700; margin:0 0 6px;">Start-Up Draft</p>
+      <ul class="rules-list">${r.draft.startup.map(x => `<li>${x}</li>`).join("")}</ul>
+      <p style="font-weight:700; margin:18px 0 6px;">Rookie Draft</p>
+      <ul class="rules-list">${r.draft.rookie.map(x => `<li>${x}</li>`).join("")}</ul>
+    </div>
+  `;
+
+  const rosterRows = r.roster.slots.map(s => `<tr><td>${s.position}</td><td>${s.count}</td></tr>`).join("");
+  const rosterHtml = `
+    <div style="padding:16px;">
+      <table><thead><tr><th>Slot</th><th>Count</th></tr></thead><tbody>${rosterRows}</tbody></table>
+      <p style="font-size:13.5px; color:var(--muted); margin:14px 4px 8px;">Starting lineup: ${r.roster.starting_lineup_total} players</p>
+      <ul class="rules-list" style="padding:0 20px 8px;">${r.roster.notes.map(x => `<li>${x}</li>`).join("")}</ul>
+    </div>
+  `;
+
+  function scoringTable(title, rowsData) {
+    const rows = rowsData.map(x => `<tr><td>${x.stat}</td><td>${x.points}</td></tr>`).join("");
+    return `
+      <div class="card scoring-subcard">
+        <p class="scoring-subhead">${title}</p>
+        <table><tbody>${rows}</tbody></table>
+      </div>
+    `;
+  }
+  const scoringHtml = `
+    <div class="scoring-grid">
+      ${scoringTable("Passing", r.scoring.passing)}
+      ${scoringTable("Rushing", r.scoring.rushing)}
+      ${scoringTable("Receiving", r.scoring.receiving)}
+      ${scoringTable("Miscellaneous", r.scoring.misc)}
+    </div>
+  `;
+  const scoringSection = `
+    <section class="rules-section">
+      <div class="section-banner">Scoring System</div>
+      ${scoringHtml}
+    </section>
+  `;
+
+  const waiversHtml = `<div style="padding:20px 24px;"><ul class="rules-list">${r.waivers.map(x => `<li>${x}</li>`).join("")}</ul></div>`;
+
+  const playoffStructure = r.playoffs.structure.map(x => `<li>${x}</li>`).join("");
+  const bracketRows = r.playoffs.bracket.map(b => `<tr><td>${b.round}</td><td>${b.matchups.join("; ")}</td></tr>`).join("");
+  const playoffsHtml = `
+    <div style="padding:20px 24px 4px;">
+      <ul class="rules-list">${playoffStructure}</ul>
+    </div>
+    <table><thead><tr><th>Round</th><th>Matchups</th></tr></thead><tbody>${bracketRows}</tbody></table>
+  `;
+
+  const amendHtml = `
+    <div style="padding:20px 24px;">
+      <ul class="rules-list">${r.amendments.process.map(x => `<li>${x}</li>`).join("")}</ul>
+      ${r.amendments.passed.length
+        ? `<p style="font-weight:700; margin:16px 0 6px;">Passed Amendments</p><ul class="rules-list">${r.amendments.passed.map(x => `<li>${x}</li>`).join("")}</ul>`
+        : `<p class="rules-note">No amendments passed yet.</p>`}
+    </div>
+  `;
+
+  body.innerHTML = [
+    section("General Settings", generalHtml),
+    section("Dues &amp; Payouts", duesHtml),
+    section("Draft", draftHtml),
+    section("Roster Management", rosterHtml),
+    scoringSection,
+    section("Waivers", waiversHtml),
+    section("Playoffs", playoffsHtml),
+    section("Rule Amendments", amendHtml),
+  ].join("");
+})();
+</script>
+</body>
+</html>
