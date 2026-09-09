@@ -1,0 +1,2053 @@
+[
+  {
+    "transaction_id": "1402383752314769408",
+    "season": "2026",
+    "week": 1,
+    "created": 1788716850884,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "DJ Moore (WR)",
+          "Chig Okonkwo (TE)",
+          "2027 Round 2 pick"
+        ],
+        "sent": [
+          "Ladd McConkey (WR)"
+        ]
+      },
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "Ladd McConkey (WR)"
+        ],
+        "sent": [
+          "DJ Moore (WR)",
+          "Chig Okonkwo (TE)",
+          "2027 Round 2 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1385655052995162112",
+    "season": "2026",
+    "week": 1,
+    "created": 1784728418162,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "Bhayshul Tuten (RB)",
+          "Terry McLaurin (WR)",
+          "Jake Ferguson (TE)",
+          "2027 Round 1 pick"
+        ],
+        "sent": [
+          "George Kittle (TE)",
+          "Nico Collins (WR)",
+          "Jake Tonges (TE)",
+          "2028 Round 1 pick"
+        ]
+      },
+      {
+        "owner_id": "991866326018736128",
+        "display_name": "BromanXVIII",
+        "received": [
+          "George Kittle (TE)",
+          "Nico Collins (WR)",
+          "Jake Tonges (TE)",
+          "2028 Round 1 pick"
+        ],
+        "sent": [
+          "Bhayshul Tuten (RB)",
+          "Terry McLaurin (WR)",
+          "Jake Ferguson (TE)",
+          "2027 Round 1 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1385103020726980608",
+    "season": "2026",
+    "week": 1,
+    "created": 1784596803412,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "604558405637562368",
+        "display_name": "DickSlaughter69",
+        "received": [
+          "Aaron Jones (RB)",
+          "Baker Mayfield (QB)"
+        ],
+        "sent": [
+          "2027 Round 3 pick",
+          "2028 Round 1 pick"
+        ]
+      },
+      {
+        "owner_id": "991866326018736128",
+        "display_name": "BromanXVIII",
+        "received": [
+          "2027 Round 3 pick",
+          "2028 Round 1 pick"
+        ],
+        "sent": [
+          "Aaron Jones (RB)",
+          "Baker Mayfield (QB)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1374794492166549504",
+    "season": "2026",
+    "week": 1,
+    "created": 1782139058680,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "604558405637562368",
+        "display_name": "DickSlaughter69",
+        "received": [
+          "Mike Evans (WR)",
+          "Tua Tagovailoa (QB)"
+        ],
+        "sent": [
+          "Rashid Shaheed (WR)",
+          "2028 Round 3 pick"
+        ]
+      },
+      {
+        "owner_id": "657042154346082304",
+        "display_name": "youngshledon",
+        "received": [
+          "Rashid Shaheed (WR)",
+          "2028 Round 3 pick"
+        ],
+        "sent": [
+          "Mike Evans (WR)",
+          "Tua Tagovailoa (QB)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1357422323224817664",
+    "season": "2026",
+    "week": 1,
+    "created": 1777997210846,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "657042154346082304",
+        "display_name": "youngshledon",
+        "received": [
+          "2026 Round 3 pick",
+          "2026 Round 4 pick"
+        ],
+        "sent": [
+          "2026 Round 3 pick"
+        ]
+      },
+      {
+        "owner_id": "991866326018736128",
+        "display_name": "BromanXVIII",
+        "received": [
+          "2026 Round 3 pick"
+        ],
+        "sent": [
+          "2026 Round 3 pick",
+          "2026 Round 4 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1357384502644584448",
+    "season": "2026",
+    "week": 1,
+    "created": 1777988193717,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "410257586844073984",
+        "display_name": "ChickenChooker",
+        "received": [
+          "Marquise Brown (WR)"
+        ],
+        "sent": [
+          "2026 Round 3 pick",
+          "2026 Round 4 pick"
+        ]
+      },
+      {
+        "owner_id": "531218982082400256",
+        "display_name": "conlure",
+        "received": [
+          "2026 Round 3 pick",
+          "2026 Round 4 pick"
+        ],
+        "sent": [
+          "Marquise Brown (WR)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1357068993701105664",
+    "season": "2026",
+    "week": 1,
+    "created": 1777912970523,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "531218982082400256",
+        "display_name": "conlure",
+        "received": [
+          "2026 Round 2 pick"
+        ],
+        "sent": [
+          "2026 Round 2 pick",
+          "2026 Round 3 pick"
+        ]
+      },
+      {
+        "owner_id": "657042154346082304",
+        "display_name": "youngshledon",
+        "received": [
+          "2026 Round 2 pick",
+          "2026 Round 3 pick"
+        ],
+        "sent": [
+          "2026 Round 2 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1357054326605873152",
+    "season": "2026",
+    "week": 1,
+    "created": 1777909473615,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "531218982082400256",
+        "display_name": "conlure",
+        "received": [
+          "2026 Round 3 pick",
+          "2026 Round 1 pick"
+        ],
+        "sent": [
+          "2026 Round 1 pick"
+        ]
+      },
+      {
+        "owner_id": "657042154346082304",
+        "display_name": "youngshledon",
+        "received": [
+          "2026 Round 1 pick"
+        ],
+        "sent": [
+          "2026 Round 3 pick",
+          "2026 Round 1 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1356292591439585280",
+    "season": "2026",
+    "week": 1,
+    "created": 1777727861799,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "2026 Round 1 pick"
+        ],
+        "sent": [
+          "Kyler Murray (QB)",
+          "Jahan Dotson (WR)"
+        ]
+      },
+      {
+        "owner_id": "992221996681412608",
+        "display_name": "satterfieldaz",
+        "received": [
+          "Kyler Murray (QB)",
+          "Jahan Dotson (WR)"
+        ],
+        "sent": [
+          "2026 Round 1 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1356144956233764864",
+    "season": "2026",
+    "week": 1,
+    "created": 1777692662823,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "604558405637562368",
+        "display_name": "DickSlaughter69",
+        "received": [
+          "Luther Burden (WR)",
+          "Tucker Kraft (TE)"
+        ],
+        "sent": [
+          "Emeka Egbuka (WR)",
+          "2027 Round 2 pick"
+        ]
+      },
+      {
+        "owner_id": "81600624009297920",
+        "display_name": "GingerBeard40",
+        "received": [
+          "Emeka Egbuka (WR)",
+          "2027 Round 2 pick"
+        ],
+        "sent": [
+          "Luther Burden (WR)",
+          "Tucker Kraft (TE)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1356113931239714816",
+    "season": "2026",
+    "week": 1,
+    "created": 1777685265887,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "410257586844073984",
+        "display_name": "ChickenChooker",
+        "received": [
+          "AJ Barner (TE)",
+          "2026 Round 1 pick"
+        ],
+        "sent": [
+          "Bo Nix (QB)"
+        ]
+      },
+      {
+        "owner_id": "81600624009297920",
+        "display_name": "GingerBeard40",
+        "received": [
+          "Bo Nix (QB)"
+        ],
+        "sent": [
+          "AJ Barner (TE)",
+          "2026 Round 1 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1356085892799807488",
+    "season": "2026",
+    "week": 1,
+    "created": 1777678581003,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "Ladd McConkey (WR)"
+        ],
+        "sent": [
+          "2027 Round 2 pick",
+          "2026 Round 1 pick"
+        ]
+      },
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "2027 Round 2 pick",
+          "2026 Round 1 pick"
+        ],
+        "sent": [
+          "Ladd McConkey (WR)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1355621728033710080",
+    "season": "2026",
+    "week": 1,
+    "created": 1777567915499,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "Geno Smith (QB)",
+          "2026 Round 1 pick"
+        ],
+        "sent": [
+          "Matthew Stafford (QB)"
+        ]
+      },
+      {
+        "owner_id": "410257586844073984",
+        "display_name": "ChickenChooker",
+        "received": [
+          "Matthew Stafford (QB)"
+        ],
+        "sent": [
+          "Geno Smith (QB)",
+          "2026 Round 1 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1355032684388163586",
+    "season": "2026",
+    "week": 1,
+    "created": 1777427476550,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "576591884302987264",
+        "display_name": "BadmanHoots",
+        "received": [
+          "Brenton Strange (TE)",
+          "2027 Round 2 pick",
+          "2027 Round 2 pick"
+        ],
+        "sent": [
+          "Juwan Johnson (TE)",
+          "Joshua Palmer (WR)",
+          "2026 Round 2 pick",
+          "2026 Round 2 pick"
+        ]
+      },
+      {
+        "owner_id": "410257586844073984",
+        "display_name": "ChickenChooker",
+        "received": [
+          "Juwan Johnson (TE)",
+          "Joshua Palmer (WR)",
+          "2026 Round 2 pick",
+          "2026 Round 2 pick"
+        ],
+        "sent": [
+          "Brenton Strange (TE)",
+          "2027 Round 2 pick",
+          "2027 Round 2 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1355026484107964416",
+    "season": "2026",
+    "week": 1,
+    "created": 1777425998289,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "410257586844073984",
+        "display_name": "ChickenChooker",
+        "received": [
+          "2026 Round 4 pick"
+        ],
+        "sent": [
+          "Travis Kelce (TE)"
+        ]
+      },
+      {
+        "owner_id": "604558405637562368",
+        "display_name": "DickSlaughter69",
+        "received": [
+          "Travis Kelce (TE)"
+        ],
+        "sent": [
+          "2026 Round 4 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1354937981638553600",
+    "season": "2026",
+    "week": 1,
+    "created": 1777404897655,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "Braelon Allen (RB)",
+          "2026 Round 1 pick"
+        ],
+        "sent": [
+          "2027 Round 1 pick",
+          "2026 Round 1 pick"
+        ]
+      },
+      {
+        "owner_id": "531218982082400256",
+        "display_name": "conlure",
+        "received": [
+          "2027 Round 1 pick",
+          "2026 Round 1 pick"
+        ],
+        "sent": [
+          "Braelon Allen (RB)",
+          "2026 Round 1 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1354558724911431680",
+    "season": "2026",
+    "week": 1,
+    "created": 1777314475804,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "Romeo Doubs (WR)"
+        ],
+        "sent": [
+          "2026 Round 2 pick"
+        ]
+      },
+      {
+        "owner_id": "531218982082400256",
+        "display_name": "conlure",
+        "received": [
+          "2026 Round 2 pick"
+        ],
+        "sent": [
+          "Romeo Doubs (WR)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1347048134248775680",
+    "season": "2026",
+    "week": 1,
+    "created": 1775523811450,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "657042154346082304",
+        "display_name": "youngshledon",
+        "received": [
+          "2028 Round 4 pick"
+        ],
+        "sent": [
+          "2028 Round 4 pick"
+        ]
+      },
+      {
+        "owner_id": "992221996681412608",
+        "display_name": "satterfieldaz",
+        "received": [
+          "2028 Round 4 pick"
+        ],
+        "sent": [
+          "2028 Round 4 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1329981546777559040",
+    "season": "2026",
+    "week": 1,
+    "created": 1771454819915,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "604558405637562368",
+        "display_name": "DickSlaughter69",
+        "received": [
+          "Ben Sinnott (TE)",
+          "Emeka Egbuka (WR)",
+          "James Cook (RB)",
+          "Quentin Johnston (WR)",
+          "2027 Round 1 pick"
+        ],
+        "sent": [
+          "Isaiah Bond (WR)",
+          "Rico Dowdle (RB)",
+          "Puka Nacua (WR)",
+          "2028 Round 2 pick"
+        ]
+      },
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "Isaiah Bond (WR)",
+          "Rico Dowdle (RB)",
+          "Puka Nacua (WR)",
+          "2028 Round 2 pick"
+        ],
+        "sent": [
+          "Ben Sinnott (TE)",
+          "Emeka Egbuka (WR)",
+          "James Cook (RB)",
+          "Quentin Johnston (WR)",
+          "2027 Round 1 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1329556344188964864",
+    "season": "2026",
+    "week": 1,
+    "created": 1771353443719,
+    "num_parties": 3,
+    "parties": [
+      {
+        "owner_id": "576591884302987264",
+        "display_name": "BadmanHoots",
+        "received": [
+          "2026 Round 2 pick",
+          "2026 Round 2 pick",
+          "2027 Round 1 pick"
+        ],
+        "sent": [
+          "Michael Wilson (WR)",
+          "Matthew Golden (WR)",
+          "Jake Tonges (TE)",
+          "2026 Round 1 pick"
+        ]
+      },
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "Matthew Golden (WR)",
+          "Jake Tonges (TE)",
+          "2026 Round 1 pick"
+        ],
+        "sent": [
+          "Xavier Worthy (WR)",
+          "Saquon Barkley (RB)",
+          "2026 Round 2 pick",
+          "2026 Round 2 pick"
+        ]
+      },
+      {
+        "owner_id": "657042154346082304",
+        "display_name": "youngshledon",
+        "received": [
+          "Michael Wilson (WR)",
+          "Xavier Worthy (WR)",
+          "Saquon Barkley (RB)",
+          "2026 Round 1 pick"
+        ],
+        "sent": [
+          "2026 Round 1 pick",
+          "2027 Round 1 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1323906593783300096",
+    "season": "2026",
+    "week": 1,
+    "created": 1770006438255,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "Ladd McConkey (WR)",
+          "Justin Fields (QB)",
+          "James Cook (RB)",
+          "Chig Okonkwo (TE)",
+          "2028 Round 1 pick"
+        ],
+        "sent": [
+          "Audric Estime (RB)",
+          "Brian Thomas (WR)",
+          "Jahmyr Gibbs (RB)"
+        ]
+      },
+      {
+        "owner_id": "992430958571819008",
+        "display_name": "reedjamesjr",
+        "received": [
+          "Audric Estime (RB)",
+          "Brian Thomas (WR)",
+          "Jahmyr Gibbs (RB)"
+        ],
+        "sent": [
+          "Ladd McConkey (WR)",
+          "Justin Fields (QB)",
+          "James Cook (RB)",
+          "Chig Okonkwo (TE)",
+          "2028 Round 1 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1323846691626942464",
+    "season": "2026",
+    "week": 1,
+    "created": 1769992156468,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "604558405637562368",
+        "display_name": "DickSlaughter69",
+        "received": [
+          "$1 FAAB"
+        ],
+        "sent": [
+          "$1 FAAB"
+        ]
+      },
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "$1 FAAB"
+        ],
+        "sent": [
+          "$1 FAAB"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1303848314256510976",
+    "season": "2025",
+    "week": 14,
+    "created": 1765224171751,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "Tre' Harris (WR)",
+          "Saquon Barkley (RB)",
+          "2026 Round 3 pick"
+        ],
+        "sent": [
+          "Quinshon Judkins (RB)",
+          "2026 Round 4 pick"
+        ]
+      },
+      {
+        "owner_id": "992430958571819008",
+        "display_name": "reedjamesjr",
+        "received": [
+          "Quinshon Judkins (RB)",
+          "2026 Round 4 pick"
+        ],
+        "sent": [
+          "Tre' Harris (WR)",
+          "Saquon Barkley (RB)",
+          "2026 Round 3 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1300693250876661760",
+    "season": "2025",
+    "week": 13,
+    "created": 1764471946022,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "604558405637562368",
+        "display_name": "DickSlaughter69",
+        "received": [
+          "Jacoby Brissett (QB)"
+        ],
+        "sent": [
+          "2026 Round 3 pick"
+        ]
+      },
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "2026 Round 3 pick"
+        ],
+        "sent": [
+          "Jacoby Brissett (QB)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1295972875676708864",
+    "season": "2025",
+    "week": 11,
+    "created": 1763346520874,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "410257586844073984",
+        "display_name": "ChickenChooker",
+        "received": [
+          "Derrick Henry (RB)",
+          "Brenton Strange (TE)",
+          "2027 Round 2 pick"
+        ],
+        "sent": [
+          "2026 Round 2 pick",
+          "2027 Round 1 pick"
+        ]
+      },
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "2026 Round 2 pick",
+          "2027 Round 1 pick"
+        ],
+        "sent": [
+          "Derrick Henry (RB)",
+          "Brenton Strange (TE)",
+          "2027 Round 2 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1294798215907905536",
+    "season": "2025",
+    "week": 11,
+    "created": 1763066460161,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "Jacory Croskey-Merritt (RB)",
+          "Tyler Shough (QB)",
+          "2026 Round 2 pick"
+        ],
+        "sent": [
+          "Cam Ward (QB)"
+        ]
+      },
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "Cam Ward (QB)"
+        ],
+        "sent": [
+          "Jacory Croskey-Merritt (RB)",
+          "Tyler Shough (QB)",
+          "2026 Round 2 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1284641165320138752",
+    "season": "2025",
+    "week": 7,
+    "created": 1760644830593,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "604558405637562368",
+        "display_name": "DickSlaughter69",
+        "received": [
+          "2026 Round 3 pick"
+        ],
+        "sent": [
+          "Kendrick Bourne (WR)"
+        ]
+      },
+      {
+        "owner_id": "531218982082400256",
+        "display_name": "conlure",
+        "received": [
+          "Kendrick Bourne (WR)"
+        ],
+        "sent": [
+          "2026 Round 3 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1277038029415923712",
+    "season": "2025",
+    "week": 4,
+    "created": 1758832101734,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "Kaleb Johnson (RB)",
+          "Nico Collins (WR)",
+          "2026 Round 2 pick"
+        ],
+        "sent": [
+          "Chuba Hubbard (RB)",
+          "Drake London (WR)"
+        ]
+      },
+      {
+        "owner_id": "604558405637562368",
+        "display_name": "DickSlaughter69",
+        "received": [
+          "Chuba Hubbard (RB)",
+          "Drake London (WR)"
+        ],
+        "sent": [
+          "Kaleb Johnson (RB)",
+          "Nico Collins (WR)",
+          "2026 Round 2 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1270839134201577472",
+    "season": "2025",
+    "week": 1,
+    "created": 1757354169945,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "Marvin Mims (WR)",
+          "2026 Round 3 pick"
+        ],
+        "sent": [
+          "Quentin Johnston (WR)"
+        ]
+      },
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "Quentin Johnston (WR)"
+        ],
+        "sent": [
+          "Marvin Mims (WR)",
+          "2026 Round 3 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1262602493515268096",
+    "season": "2025",
+    "week": 1,
+    "created": 1755390401775,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "657042154346082304",
+        "display_name": "youngshledon",
+        "received": [
+          "Darnell Mooney (WR)",
+          "2026 Round 1 pick",
+          "2026 Round 2 pick"
+        ],
+        "sent": [
+          "Ladd McConkey (WR)"
+        ]
+      },
+      {
+        "owner_id": "992430958571819008",
+        "display_name": "reedjamesjr",
+        "received": [
+          "Ladd McConkey (WR)"
+        ],
+        "sent": [
+          "Darnell Mooney (WR)",
+          "2026 Round 1 pick",
+          "2026 Round 2 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1235651109968687104",
+    "season": "2025",
+    "week": 1,
+    "created": 1748964691205,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "George Kittle (TE)"
+        ],
+        "sent": [
+          "Dalton Kincaid (TE)",
+          "Isiah Pacheco (RB)"
+        ]
+      },
+      {
+        "owner_id": "657042154346082304",
+        "display_name": "youngshledon",
+        "received": [
+          "Dalton Kincaid (TE)",
+          "Isiah Pacheco (RB)"
+        ],
+        "sent": [
+          "George Kittle (TE)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1232541521631252480",
+    "season": "2025",
+    "week": 1,
+    "created": 1748223307573,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "604558405637562368",
+        "display_name": "DickSlaughter69",
+        "received": [
+          "Nico Collins (WR)"
+        ],
+        "sent": [
+          "Derrick Henry (RB)",
+          "2026 Round 1 pick"
+        ]
+      },
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "Derrick Henry (RB)",
+          "2026 Round 1 pick"
+        ],
+        "sent": [
+          "Nico Collins (WR)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1230266625270222848",
+    "season": "2025",
+    "week": 1,
+    "created": 1747680930014,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "Xavier Worthy (WR)"
+        ],
+        "sent": [
+          "2025 Round 1 pick"
+        ]
+      },
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "2025 Round 1 pick"
+        ],
+        "sent": [
+          "Xavier Worthy (WR)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1230212417263255552",
+    "season": "2025",
+    "week": 1,
+    "created": 1747668005818,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "531218982082400256",
+        "display_name": "conlure",
+        "received": [
+          "Ricky Pearsall (WR)",
+          "Christian McCaffrey (RB)"
+        ],
+        "sent": [
+          "2025 Round 2 pick",
+          "2026 Round 1 pick"
+        ]
+      },
+      {
+        "owner_id": "657042154346082304",
+        "display_name": "youngshledon",
+        "received": [
+          "2025 Round 2 pick",
+          "2026 Round 1 pick"
+        ],
+        "sent": [
+          "Ricky Pearsall (WR)",
+          "Christian McCaffrey (RB)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1228877549753352192",
+    "season": "2025",
+    "week": 1,
+    "created": 1747349748603,
+    "num_parties": 3,
+    "parties": [
+      {
+        "owner_id": "576591884302987264",
+        "display_name": "BadmanHoots",
+        "received": [
+          "Justin Jefferson (WR)"
+        ],
+        "sent": [
+          "Michael Pittman (WR)",
+          "2025 Round 1 pick",
+          "2026 Round 1 pick"
+        ]
+      },
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "2025 Round 1 pick"
+        ],
+        "sent": [
+          "Keon Coleman (WR)",
+          "Jaylen Waddle (WR)"
+        ]
+      },
+      {
+        "owner_id": "410257586844073984",
+        "display_name": "ChickenChooker",
+        "received": [
+          "Keon Coleman (WR)",
+          "Michael Pittman (WR)",
+          "Jaylen Waddle (WR)",
+          "2026 Round 1 pick"
+        ],
+        "sent": [
+          "Justin Jefferson (WR)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1227303212038492160",
+    "season": "2025",
+    "week": 1,
+    "created": 1746974397242,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "992430958571819008",
+        "display_name": "reedjamesjr",
+        "received": [
+          "George Pickens (WR)",
+          "2025 Round 2 pick"
+        ],
+        "sent": [
+          "Terry McLaurin (WR)"
+        ]
+      },
+      {
+        "owner_id": "991866326018736128",
+        "display_name": "BromanXVIII",
+        "received": [
+          "Terry McLaurin (WR)"
+        ],
+        "sent": [
+          "George Pickens (WR)",
+          "2025 Round 2 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1221185125551710208",
+    "season": "2025",
+    "week": 1,
+    "created": 1745515731756,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "410257586844073984",
+        "display_name": "ChickenChooker",
+        "received": [
+          "Geno Smith (QB)",
+          "Travis Etienne (RB)",
+          "Tank Bigsby (RB)",
+          "2025 Round 3 pick"
+        ],
+        "sent": [
+          "Derrick Henry (RB)",
+          "Josh Jacobs (RB)"
+        ]
+      },
+      {
+        "owner_id": "604558405637562368",
+        "display_name": "DickSlaughter69",
+        "received": [
+          "Derrick Henry (RB)",
+          "Josh Jacobs (RB)"
+        ],
+        "sent": [
+          "Geno Smith (QB)",
+          "Travis Etienne (RB)",
+          "Tank Bigsby (RB)",
+          "2025 Round 3 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1210783619308593152",
+    "season": "2025",
+    "week": 1,
+    "created": 1743035819417,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "Caleb Williams (QB)",
+          "Brian Thomas (WR)",
+          "2025 Round 1 pick",
+          "2026 Round 2 pick"
+        ],
+        "sent": [
+          "Jayden Daniels (QB)",
+          "Marcus Mariota (QB)",
+          "2025 Round 1 pick"
+        ]
+      },
+      {
+        "owner_id": "81600624009297920",
+        "display_name": "GingerBeard40",
+        "received": [
+          "Jayden Daniels (QB)",
+          "Marcus Mariota (QB)",
+          "2025 Round 1 pick"
+        ],
+        "sent": [
+          "Caleb Williams (QB)",
+          "Brian Thomas (WR)",
+          "2025 Round 1 pick",
+          "2026 Round 2 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1205259746328711168",
+    "season": "2025",
+    "week": 1,
+    "created": 1741718825469,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "657042154346082304",
+        "display_name": "youngshledon",
+        "received": [
+          "Mike Evans (WR)"
+        ],
+        "sent": [
+          "Najee Harris (RB)"
+        ]
+      },
+      {
+        "owner_id": "992430958571819008",
+        "display_name": "reedjamesjr",
+        "received": [
+          "Najee Harris (RB)"
+        ],
+        "sent": [
+          "Mike Evans (WR)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1203431815734378496",
+    "season": "2025",
+    "week": 1,
+    "created": 1741283012855,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "Jaylen Waddle (WR)",
+          "Chuba Hubbard (RB)"
+        ],
+        "sent": [
+          "2025 Round 2 pick",
+          "2026 Round 1 pick"
+        ]
+      },
+      {
+        "owner_id": "531218982082400256",
+        "display_name": "conlure",
+        "received": [
+          "2025 Round 2 pick",
+          "2026 Round 1 pick"
+        ],
+        "sent": [
+          "Jaylen Waddle (WR)",
+          "Chuba Hubbard (RB)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1186138150152032256",
+    "season": "2025",
+    "week": 1,
+    "created": 1737159881678,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "576591884302987264",
+        "display_name": "BadmanHoots",
+        "received": [
+          "Rashee Rice (WR)",
+          "2027 Round 1 pick",
+          "2025 Round 1 pick",
+          "2026 Round 1 pick"
+        ],
+        "sent": [
+          "Tee Higgins (WR)",
+          "Brandon Aiyuk (WR)",
+          "2026 Round 2 pick",
+          "2025 Round 1 pick"
+        ]
+      },
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "Tee Higgins (WR)",
+          "Brandon Aiyuk (WR)",
+          "2026 Round 2 pick",
+          "2025 Round 1 pick"
+        ],
+        "sent": [
+          "Rashee Rice (WR)",
+          "2027 Round 1 pick",
+          "2025 Round 1 pick",
+          "2026 Round 1 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1185644633886945280",
+    "season": "2025",
+    "week": 1,
+    "created": 1737042218231,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "Keon Coleman (WR)"
+        ],
+        "sent": [
+          "2025 Round 2 pick"
+        ]
+      },
+      {
+        "owner_id": "604558405637562368",
+        "display_name": "DickSlaughter69",
+        "received": [
+          "2025 Round 2 pick"
+        ],
+        "sent": [
+          "Keon Coleman (WR)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1184324438312243200",
+    "season": "2025",
+    "week": 1,
+    "created": 1736727459078,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "Drake London (WR)",
+          "Isiah Pacheco (RB)",
+          "2026 Round 1 pick"
+        ],
+        "sent": [
+          "Jayden Reed (WR)",
+          "Ben Sinnott (TE)",
+          "2025 Round 1 pick"
+        ]
+      },
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "Jayden Reed (WR)",
+          "Ben Sinnott (TE)",
+          "2025 Round 1 pick"
+        ],
+        "sent": [
+          "Drake London (WR)",
+          "Isiah Pacheco (RB)",
+          "2026 Round 1 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1169762996692918272",
+    "season": "2024",
+    "week": 13,
+    "created": 1733255740858,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "604558405637562368",
+        "display_name": "DickSlaughter69",
+        "received": [
+          "Rico Dowdle (RB)"
+        ],
+        "sent": [
+          "2025 Round 2 pick"
+        ]
+      },
+      {
+        "owner_id": "992221996681412608",
+        "display_name": "satterfieldaz",
+        "received": [
+          "2025 Round 2 pick"
+        ],
+        "sent": [
+          "Rico Dowdle (RB)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1162099311757721600",
+    "season": "2024",
+    "week": 10,
+    "created": 1731428575985,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "Trevor Lawrence (QB)",
+          "Quentin Johnston (WR)",
+          "2025 Round 1 pick"
+        ],
+        "sent": [
+          "C.J. Stroud (QB)"
+        ]
+      },
+      {
+        "owner_id": "410257586844073984",
+        "display_name": "ChickenChooker",
+        "received": [
+          "C.J. Stroud (QB)"
+        ],
+        "sent": [
+          "Trevor Lawrence (QB)",
+          "Quentin Johnston (WR)",
+          "2025 Round 1 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1161088803374186496",
+    "season": "2024",
+    "week": 10,
+    "created": 1731187652012,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "410257586844073984",
+        "display_name": "ChickenChooker",
+        "received": [
+          "DK Metcalf (WR)",
+          "2025 Round 4 pick"
+        ],
+        "sent": [
+          "Nico Collins (WR)"
+        ]
+      },
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "Nico Collins (WR)"
+        ],
+        "sent": [
+          "DK Metcalf (WR)",
+          "2025 Round 4 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1154473574556684288",
+    "season": "2024",
+    "week": 7,
+    "created": 1729610458557,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "992430958571819008",
+        "display_name": "reedjamesjr",
+        "received": [
+          "2025 Round 3 pick"
+        ],
+        "sent": [
+          "Russell Wilson (QB)"
+        ]
+      },
+      {
+        "owner_id": "81600624009297920",
+        "display_name": "GingerBeard40",
+        "received": [
+          "Russell Wilson (QB)"
+        ],
+        "sent": [
+          "2025 Round 3 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1153786097991811072",
+    "season": "2024",
+    "week": 7,
+    "created": 1729446551371,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "Jordan Whittington (WR)",
+          "DeMario Douglas (WR)",
+          "2025 Round 1 pick",
+          "2025 Round 1 pick"
+        ],
+        "sent": [
+          "George Pickens (WR)",
+          "Breece Hall (RB)",
+          "2025 Round 2 pick"
+        ]
+      },
+      {
+        "owner_id": "991866326018736128",
+        "display_name": "BromanXVIII",
+        "received": [
+          "George Pickens (WR)",
+          "Breece Hall (RB)",
+          "2025 Round 2 pick"
+        ],
+        "sent": [
+          "Jordan Whittington (WR)",
+          "DeMario Douglas (WR)",
+          "2025 Round 1 pick",
+          "2025 Round 1 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1153136706204372992",
+    "season": "2024",
+    "week": 7,
+    "created": 1729291724304,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "DK Metcalf (WR)",
+          "Jahmyr Gibbs (RB)"
+        ],
+        "sent": [
+          "Stefon Diggs (WR)",
+          "JuJu Smith-Schuster (WR)",
+          "Aaron Jones (RB)",
+          "2025 Round 1 pick",
+          "2025 Round 3 pick"
+        ]
+      },
+      {
+        "owner_id": "991866326018736128",
+        "display_name": "BromanXVIII",
+        "received": [
+          "Stefon Diggs (WR)",
+          "JuJu Smith-Schuster (WR)",
+          "Aaron Jones (RB)",
+          "2025 Round 1 pick",
+          "2025 Round 3 pick"
+        ],
+        "sent": [
+          "DK Metcalf (WR)",
+          "Jahmyr Gibbs (RB)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1152719702532308992",
+    "season": "2024",
+    "week": 7,
+    "created": 1729192302881,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "576591884302987264",
+        "display_name": "BadmanHoots",
+        "received": [
+          "2025 Round 1 pick"
+        ],
+        "sent": [
+          "Kirk Cousins (QB)",
+          "2025 Round 3 pick"
+        ]
+      },
+      {
+        "owner_id": "657042154346082304",
+        "display_name": "youngshledon",
+        "received": [
+          "Kirk Cousins (QB)",
+          "2025 Round 3 pick"
+        ],
+        "sent": [
+          "2025 Round 1 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1149760160961904640",
+    "season": "2024",
+    "week": 6,
+    "created": 1728486693185,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "Ben Sinnott (TE)",
+          "2025 Round 2 pick",
+          "2025 Round 2 pick"
+        ],
+        "sent": [
+          "Stefon Diggs (WR)",
+          "JuJu Smith-Schuster (WR)",
+          "2025 Round 3 pick"
+        ]
+      },
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "Stefon Diggs (WR)",
+          "JuJu Smith-Schuster (WR)",
+          "2025 Round 3 pick"
+        ],
+        "sent": [
+          "Ben Sinnott (TE)",
+          "2025 Round 2 pick",
+          "2025 Round 2 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1147715740201881600",
+    "season": "2024",
+    "week": 5,
+    "created": 1727999265292,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "DJ Moore (WR)",
+          "2025 Round 2 pick",
+          "2025 Round 4 pick"
+        ],
+        "sent": [
+          "Tank Dell (WR)",
+          "Aaron Rodgers (QB)"
+        ]
+      },
+      {
+        "owner_id": "992430958571819008",
+        "display_name": "reedjamesjr",
+        "received": [
+          "Tank Dell (WR)",
+          "Aaron Rodgers (QB)"
+        ],
+        "sent": [
+          "DJ Moore (WR)",
+          "2025 Round 2 pick",
+          "2025 Round 4 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1147714769740386304",
+    "season": "2024",
+    "week": 5,
+    "created": 1727999033916,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "657042154346082304",
+        "display_name": "youngshledon",
+        "received": [
+          "Kadarius Toney (WR)",
+          "Wan'Dale Robinson (WR)"
+        ],
+        "sent": [
+          "Jacoby Brissett (QB)"
+        ]
+      },
+      {
+        "owner_id": "992430958571819008",
+        "display_name": "reedjamesjr",
+        "received": [
+          "Jacoby Brissett (QB)"
+        ],
+        "sent": [
+          "Kadarius Toney (WR)",
+          "Wan'Dale Robinson (WR)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1146857854675111936",
+    "season": "2024",
+    "week": 4,
+    "created": 1727794729444,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "531218982082400256",
+        "display_name": "conlure",
+        "received": [
+          "Tyreek Hill (WR)"
+        ],
+        "sent": [
+          "2025 Round 2 pick",
+          "2025 Round 2 pick"
+        ]
+      },
+      {
+        "owner_id": "992430958571819008",
+        "display_name": "reedjamesjr",
+        "received": [
+          "2025 Round 2 pick",
+          "2025 Round 2 pick"
+        ],
+        "sent": [
+          "Tyreek Hill (WR)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1146844374865772544",
+    "season": "2024",
+    "week": 4,
+    "created": 1727791515607,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "2025 Round 1 pick"
+        ],
+        "sent": [
+          "Nick Chubb (RB)",
+          "Jonathan Taylor (RB)"
+        ]
+      },
+      {
+        "owner_id": "531218982082400256",
+        "display_name": "conlure",
+        "received": [
+          "Nick Chubb (RB)",
+          "Jonathan Taylor (RB)"
+        ],
+        "sent": [
+          "2025 Round 1 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1139887998587432960",
+    "season": "2024",
+    "week": 2,
+    "created": 1726132986259,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "531218982082400256",
+        "display_name": "conlure",
+        "received": [
+          "Mark Andrews (TE)",
+          "2025 Round 2 pick"
+        ],
+        "sent": [
+          "George Kittle (TE)",
+          "Jordan Mason (RB)"
+        ]
+      },
+      {
+        "owner_id": "657042154346082304",
+        "display_name": "youngshledon",
+        "received": [
+          "George Kittle (TE)",
+          "Jordan Mason (RB)"
+        ],
+        "sent": [
+          "Mark Andrews (TE)",
+          "2025 Round 2 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1128437489603137536",
+    "season": "2024",
+    "week": 1,
+    "created": 1723402972177,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "Cole Kmet (TE)"
+        ],
+        "sent": [
+          "Jerome Ford (RB)"
+        ]
+      },
+      {
+        "owner_id": "531218982082400256",
+        "display_name": "conlure",
+        "received": [
+          "Jerome Ford (RB)"
+        ],
+        "sent": [
+          "Cole Kmet (TE)"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1125045540506456064",
+    "season": "2024",
+    "week": 1,
+    "created": 1722594268493,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "410257586844073984",
+        "display_name": "ChickenChooker",
+        "received": [
+          "2024 Round 10 pick",
+          "2024 Round 11 pick",
+          "2024 Round 19 pick"
+        ],
+        "sent": [
+          "2024 Round 10 pick",
+          "2024 Round 11 pick",
+          "2024 Round 19 pick"
+        ]
+      },
+      {
+        "owner_id": "81600624009297920",
+        "display_name": "GingerBeard40",
+        "received": [
+          "2024 Round 10 pick",
+          "2024 Round 11 pick",
+          "2024 Round 19 pick"
+        ],
+        "sent": [
+          "2024 Round 10 pick",
+          "2024 Round 11 pick",
+          "2024 Round 19 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1124432461754150912",
+    "season": "2024",
+    "week": 1,
+    "created": 1722448099128,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "606214229866909696",
+        "display_name": "MrBroadbent13",
+        "received": [
+          "2024 Round 7 pick",
+          "2024 Round 8 pick"
+        ],
+        "sent": [
+          "2024 Round 10 pick",
+          "2024 Round 5 pick",
+          "2024 Round 9 pick"
+        ]
+      },
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "2024 Round 10 pick",
+          "2024 Round 5 pick",
+          "2024 Round 9 pick"
+        ],
+        "sent": [
+          "2024 Round 7 pick",
+          "2024 Round 8 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1123730983380987904",
+    "season": "2024",
+    "week": 1,
+    "created": 1722280853651,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "576591884302987264",
+        "display_name": "BadmanHoots",
+        "received": [
+          "2024 Round 3 pick",
+          "2024 Round 5 pick"
+        ],
+        "sent": [
+          "2024 Round 2 pick",
+          "2024 Round 5 pick"
+        ]
+      },
+      {
+        "owner_id": "657042154346082304",
+        "display_name": "youngshledon",
+        "received": [
+          "2024 Round 2 pick",
+          "2024 Round 5 pick"
+        ],
+        "sent": [
+          "2024 Round 3 pick",
+          "2024 Round 5 pick"
+        ]
+      }
+    ]
+  },
+  {
+    "transaction_id": "1122991402276728832",
+    "season": "2024",
+    "week": 1,
+    "created": 1722104523776,
+    "num_parties": 2,
+    "parties": [
+      {
+        "owner_id": "410257586844073984",
+        "display_name": "ChickenChooker",
+        "received": [
+          "2024 Round 1 pick",
+          "2024 Round 2 pick",
+          "2024 Round 4 pick"
+        ],
+        "sent": [
+          "2024 Round 1 pick",
+          "2024 Round 2 pick",
+          "2024 Round 3 pick"
+        ]
+      },
+      {
+        "owner_id": "426481399462117376",
+        "display_name": "Hootsjr",
+        "received": [
+          "2024 Round 1 pick",
+          "2024 Round 2 pick",
+          "2024 Round 3 pick"
+        ],
+        "sent": [
+          "2024 Round 1 pick",
+          "2024 Round 2 pick",
+          "2024 Round 4 pick"
+        ]
+      }
+    ]
+  }
+]
