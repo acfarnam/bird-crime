@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Standings — Bird Crime</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="site-header" class="site-header"></header>
+
+<main>
+  <div class="wrap">
+    <h1 class="page-title" id="standings-title">Standings</h1>
+
+    <div class="table-card card" id="standings-table-wrap">
+      <p class="loading-note">Loading…</p>
+    </div>
+  </div>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/main.js"></script>
+<script src="js/data.js"></script>
+<script>
+function fmtNum(value, decimals = 2) {
+  if (value == null || Number.isNaN(value)) return "—";
+  return value.toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+}
+
+(async function () {
+  initChrome("standings.html");
+
+  const titleEl = document.getElementById("standings-title");
+  const tableWrap = document.getElementById("standings-table-wrap");
+
+  let data;
+  try {
+    data = await loadLeagueData();
+  } catch (err) {
+    showError(tableWrap);
+    return;
+  }
+
+  const { managers, seasons, allSeasons } = data;
+  const season = allSeasons[allSeasons.length - 1];
+  const sd = seasons[season];
+
+  titleEl.textContent = `${season} Standings`;
+
+  if (!sd) {
+    tableWrap.innerHTML = `<p class="error-note">No data for ${season} yet.</p>`;
+    return;
+  }
+
+  let maxPfBySeason = {};
+  try {
+    const res = await fetch("data/lineup_efficiency.json");
+    if (res.ok) {
+      const eff = await res.json();
+      maxPfBySeason = (eff.by_season && eff.by_season[season]) || {};
+    }
+  } catch (e) { /* not generated yet */ }
+
+  let opponentsRecordBySeason = {};
+  try {
+    const res = await fetch("data/advanced_stats.json");
+    if (res.ok) {
+      const adv = await res.json();
+      opponentsRecordBySeason = (adv.opponents_record && adv.opponents_record[season]) || {};
+    }
+  } catch (e) { /* not generated yet */ }
+
+  const rows = sd.standings.map((r, i) => {
+    const m = managerById(managers, r.owner_id);
+    const maxPf = maxPfBySeason[r.owner_id];
+    const oppRec = opponentsRecordBySeason[r.owner_id];
+    const maxPfVal = maxPf ? maxPf.max_pf : null;
+    const maxPpgVal = maxPf && maxPf.weeks_counted ? maxPf.max_pf / maxPf.weeks_counted : null;
+    const effVal = maxPfVal ? (r.points_for / maxPfVal) * 100 : null;
+    return {
+      seed: i + 1,
+      name: m.display_name,
+      teamName: teamNameFor(m, season),
+      placement: r.placement,
+      record: `${r.wins}-${r.losses}${r.ties ? `-${r.ties}` : ""}`,
+      win_pct: r.win_pct,
+      points_for: r.points_for,
+      ppg: r.ppg,
+      max_pf: maxPfVal,
+      max_ppg: maxPpgVal,
+      efficiency: effVal,
+      points_against: r.points_against,
+      papg: r.papg,
+      opp_record: oppRec ? `${oppRec.wins}-${oppRec.losses}` : null,
+      opp_win_pct: oppRec && (oppRec.wins + oppRec.losses) ? oppRec.wins / (oppRec.wins + oppRec.losses) : -1,
+    };
+  });
+
+  const columns = [
+    { key: "name", label: "Manager", sortKey: r => r.name.toLowerCase(), fmt: r => {
+        const tag = r.placement === 1 ? ' <span class="badge">CHAMP</span>' : r.placement === 2 ? ' <span class="badge">2ND</span>' : r.placement === 3 ? ' <span class="badge">3RD</span>' : '';
+        return `<strong>${r.name}</strong>${tag}<br><span style="color:var(--muted);font-size:11px;">${r.teamName}</span>`;
+      } },
+    { key: "record", label: "Record", sortKey: r => r.win_pct, fmt: r => r.record },
+    { key: "win_pct", label: "Win %", sortKey: r => r.win_pct, fmt: r => `${(r.win_pct * 100).toFixed(1)}%` },
+    { key: "points_for", label: "Points For", sortKey: r => r.points_for, fmt: r => fmtNum(r.points_for) },
+    { key: "ppg", label: "PF/G", sortKey: r => r.ppg, fmt: r => fmtNum(r.ppg) },
+    { key: "max_pf", label: "Max Points For", sortKey: r => (r.max_pf == null ? -1 : r.max_pf), fmt: r => fmtNum(r.max_pf) },
+    { key: "max_ppg", label: "Max PF/G", sortKey: r => (r.max_ppg == null ? -1 : r.max_ppg), fmt: r => fmtNum(r.max_ppg) },
+    { key: "efficiency", label: "Lineup Eff.", sortKey: r => (r.efficiency == null ? -1 : r.efficiency), fmt: r => r.efficiency == null ? "—" : `${r.efficiency.toFixed(2)}%` },
+    { key: "points_against", label: "Points Against", sortKey: r => r.points_against, fmt: r => fmtNum(r.points_against) },
+    { key: "papg", label: "PA/G", sortKey: r => r.papg, fmt: r => fmtNum(r.papg) },
+    { key: "opp_record", label: "Opponents Record", sortKey: r => r.opp_win_pct, fmt: r => r.opp_record || "—" },
+  ];
+
+  let sortState = { key: "win_pct", dir: -1 };
+
+  function render() {
+    const sorted = rows.slice().sort((a, b) => {
+      const col = columns.find(c => c.key === sortState.key);
+      const av = col.sortKey(a), bv = col.sortKey(b);
+      if (av < bv) return -1 * sortState.dir;
+      if (av > bv) return 1 * sortState.dir;
+      return 0;
+    });
+
+    const headHtml = columns.map(c => {
+      const isSorted = c.key === sortState.key;
+      const arrow = isSorted ? (sortState.dir === 1 ? "▲" : "▼") : "▲";
+      return `<th class="sortable${isSorted ? " sorted" : ""}" data-key="${c.key}">${c.label}<span class="arrow">${arrow}</span></th>`;
+    }).join("");
+
+    const bodyHtml = sorted.map(r => `<tr>${columns.map(c => `<td>${c.fmt(r)}</td>`).join("")}</tr>`).join("");
+
+    const liveTag = sd.live ? `<span class="live-dot"></span>Live from Sleeper` : "Final";
+
+    tableWrap.innerHTML = `
+      <div class="data-status">${liveTag}</div>
+      <table>
+        <thead><tr>${headHtml}</tr></thead>
+        <tbody>${bodyHtml}</tbody>
+      </table>
+    `;
+
+    tableWrap.querySelectorAll("th.sortable").forEach(th => {
+      th.addEventListener("click", () => {
+        const key = th.dataset.key;
+        if (sortState.key === key) sortState.dir *= -1;
+        else sortState = { key, dir: -1 };
+        render();
+      });
+    });
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>

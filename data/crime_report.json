@@ -1,0 +1,343 @@
+{
+  "issues": [
+    {
+      "headline": "QBs Dropping Like Flies",
+      "date": "Wednesday, September 23rd, 2026",
+      "weekly_recap": "<p>The defenses woke up and started playing ball! Week 1 saw 791 points on the scoreboard across the NFL, while Week 2 only had 647. For us, the average team score was 137.75 in Week 1. This week it came down to 124.73. That's a two-touchdown difference.</p><p>Another explanation for the dip in fantasy production is the sheer amount of injuries. Three more starting QBs sustained multi-week injuries, along with a slew of other starters. Saquon and Nabers both kept going in and out of the huddle, and Jadarian Price was held out of the rest of the game as a precaution. Alec Pierce seemingly came back too early from his heel surgery, and he's gotta be toast. Two of the three Chargers TEs were out there breaking stuff. Not to mention the extremely scary Jayden Reed neck injury. And that's just the ones I know off the top of my head. Honestly, it's all very depressing. Shout-out to all of these absolute maniacs for playing football so that we can play this silly game. The only good thing to come from the injuries is the memes comparing Caleb's injury to Jaxson's injury. If you're not chronically online, trust me, they are peak.</p>",
+      "weekly_recap_image": "images/week2-recap.png",
+      "match_of_week": {
+        "matchup": "Shake 'n Baker vs. PERFECT TIMING",
+        "team_a": "Shake 'n Baker",
+        "team_b": "PERFECT TIMING",
+        "poll_id": "qbs-dropping-motw",
+        "blurb": "This was my pick for Match of the Week before the trade even happened but now it's even more interesting. Both teams enter at 1-1, and the winner walks away with a winning record and thinking they won the trade. Mason's Hurts/Smith stack gets a plus matchup against a trash Bears secondary, while every one of Reed's stars is staring down a tough-ish matchup."
+      },
+      "power_rankings": [
+        {
+          "rank": 1,
+          "previous_rank": 1,
+          "team": "Egbuka Bukkake",
+          "manager": "GingerBeard40",
+          "current_record": "1-1",
+          "blurb": "After having Jayden Daniels and Dallas Goedert go down Sunday, I think most of us went into Monday night's game still thinking Wes was going to get the dub over Mason when all he needed was a 10-point performance from Nabers. Then he went down with a shoulder, and even though he came back, Jameis just could not throw a football to save his life. This week, the football gods were against him, but I'm not worried enough to move Wes down from number 1 just yet."
+        },
+        {
+          "rank": 2,
+          "previous_rank": 2,
+          "team": "Rome Wznt Built in Odunze",
+          "manager": "satterfieldaz",
+          "current_record": "2-0",
+          "blurb": "Half of AZ's points came from Josh Allen and JSN this week (83.82 points). As long as these two are balling, AZ is going to be just fine."
+        },
+        {
+          "rank": 3,
+          "previous_rank": 3,
+          "team": "Honey, I'm Mahomes",
+          "manager": "BadmanHoots",
+          "current_record": "2-0",
+          "blurb": "Fraud alert?! I put Andrew in his place this week, but my team currently has the lowest PA/G with 107.9. Still not too worried, I'm just waiting on Drake \"Drake Maye\" Maye to turn it up a bit."
+        },
+        {
+          "rank": 4,
+          "previous_rank": 4,
+          "team": "Whatre u doin step Burrow",
+          "manager": "BromanXVIII",
+          "current_record": "1-1",
+          "blurb": "Bryce Young and Cardi B's baby daddy led the way for Brandon with a comfortable win. Bryce looks like he could have taken that step forward, but he's also only gone against shit defenses. The Browns might give him his first challenge this year. On the flip side, the Bengals defense is actually good? That's great for them, but Joey B needs to be slinging that thang for Brandon's team to reach its full potential."
+        },
+        {
+          "rank": 5,
+          "previous_rank": 6,
+          "team": "Ben Johnson's Tight End",
+          "manager": "Hootsjr",
+          "current_record": "1-1",
+          "blurb": "The one week Ben didn't play Cam Ward, he actually had a decent game. Instead, he decided to play the two quarterbacks playing in the Monsoon Bowl. It didn't even matter that Caleb Williams went down at the end of the game; their entire offense struggled all game. Bagel from Marvin, who looks like he's doing everything in his power to get traded. This team needs Puka back ASAP, but for the moment, they're saying he's still not likely to go this week."
+        },
+        {
+          "rank": 6,
+          "previous_rank": 5,
+          "team": "The Gofffather",
+          "manager": "Dirico32",
+          "current_record": "0-2",
+          "blurb": "Time to panic? David took a difficult L in the Match of the Week to Connor after Goff hung 35 in Thursday's game. The good news is Zay Flowers sounds like he's returning this week. The bad news is Alec Pierce has a literal Achilles' heel. Word on the street is he's considering trying to make a comeback this year instead of electing for season-ending surgery. That might be good for David this season, but at the end of the day, the Colts just paid him way too much money to be playing fast and loose with his health. It's worth noting that Gadsden is now the only TE on the Chargers roster after both Njoku and Kolar went to IR."
+        },
+        {
+          "rank": 7,
+          "previous_rank": 7,
+          "team": "Shake 'n Baker",
+          "manager": "DickSlaughter69",
+          "current_record": "1-1",
+          "blurb": "By the skin of his teeth, Mason just scraped by this week with a dub over Wes. Instead of getting complacent, he then went out and traded Baker (new team name when?) for Pickens. While this definitely improves his points in the WR room, it means he'll be starting Jacoby Brissett for the rest of the season. Is this the move that is going to take Mason to the playoffs? Only time will tell."
+        },
+        {
+          "rank": 8,
+          "previous_rank": 8,
+          "team": "PERFECT TIMING",
+          "manager": "reedjamesjr",
+          "current_record": "1-1",
+          "blurb": "Easy win for Reed this week, but he only scored a total of 117 points. I think he probably realized that Aaron Rodgers wasn't going to cut it at QB and decided to go out and get Baker, who has also had his struggles this season. I'll be curious to see who Reed rolls with in his final flex spot this week to replace Pickens."
+        },
+        {
+          "rank": 9,
+          "previous_rank": 9,
+          "team": "British Broncos",
+          "manager": "conlure",
+          "current_record": "1-1",
+          "blurb": "Connor handily won the Match of the Week, with a 59-point differential, and Davante Adams looked like he'd stepped into a time machine. Man had himself a day with a 2-TD, 195-yard game at age 33. The Packers fan in me loves to see it. With that said, Puka is going to come back at some point and, at the very least, eat into the yardage. Adams is still nasty on the goal line, though. Also, shout-out to Dak for absolutely dismantling Dan Quinn's defense with 4 TDs and 37 fantasy points."
+        },
+        {
+          "rank": 10,
+          "previous_rank": 11,
+          "team": "The Stroud Goes Wild",
+          "manager": "MrBroadbent13",
+          "current_record": "1-1",
+          "blurb": "Tough week: DJ Moore didn't go down with an AC joint sprain, and Trevor Lawrence went up against one of the best secondary units in the league. On the bright side, Shough looks like a guy, Henderson out-carried Stevenson 16-6, and Golden is in line for more work with Jayden Reed likely out for the season."
+        },
+        {
+          "rank": 11,
+          "previous_rank": 10,
+          "team": "Drunk Darts",
+          "manager": "youngshledon",
+          "current_record": "1-1",
+          "blurb": "And just like that, Jaxson Dart's season is over. Jameis Winston, Drew Lock, and Kirk Cousins are all waiting on the bench, but Jameis looks like his arms are noodles, Sam Darnold comes back soon, and you gotta think that rookie, number 1 pick Fernando Mendoza, starts at some point. Surely one of those guys will be serviceable, though. Luckily, the Saquon and J.K. Dobbins injuries don't seem serious. Jackson now has to go against the AZ buzzsaw this week. Vibes are bad."
+        },
+        {
+          "rank": 12,
+          "previous_rank": 12,
+          "team": "Inglorious Staffords",
+          "manager": "ChickenChooker",
+          "current_record": "0-2",
+          "blurb": "JT went up against AZ this week, so I'm not certain if there was ever any hope to begin with, but you know it's bad when you're starting Jaylin Noel and Emmett Johnson. Barring a trade, I don't foresee any movement in the rankings anytime soon."
+        }
+      ]
+    },
+    {
+      "headline": "Week 1 (Over?) Reaction",
+      "date": "Wednesday, September 16th, 2026",
+      "weekly_recap": "<p>Week 1 of the NFL was absolutely wild from an offensive standpoint. Several different stats were going around about how this was the highest-scoring Week 1 since the merger. And boy howdy, did it translate to fantasy, with half of the teams in the league scoring over 150 points. Unfortunately, there were several injuries that will impact the early parts of the season (rip David), but I think for the most part there weren't any season-ending injuries to star players.</p><p>From a league perspective, most matchups were soundly won, with one exception being the barnburner that was AZ vs. Brandon. The result of that matchup could honestly have implications for the postseason, as I think both teams are likely to make it to bracket play, and I could see the bye coming down to a tiebreaker.</p><p>With that said, I've updated the power rankings now that we've actually seen some football. You'll notice I've made an effort not to overreact to some of the standout performances, as I suspect a lot of the higher performers will regress and the underperformers will get back to normal. I may not give a full rundown of each team every week, but I wanted to do so at least for the first week.</p>",
+      "power_rankings": [
+        {
+          "rank": 1,
+          "previous_rank": 1,
+          "team": "Egbuka Bukkake",
+          "manager": "GingerBeard40",
+          "current_record": "1-0",
+          "blurb": "Nearly broke the league record for highest weekly score, and that was with Bo Nix and Nabers combining for a disappointing 16 points. The only way he could have scored higher is by playing Ben's favorite player, Deshaun Watson."
+        },
+        {
+          "rank": 2,
+          "previous_rank": 2,
+          "team": "Rome Wznt Built in Odunze",
+          "manager": "satterfieldaz",
+          "current_record": "1-0",
+          "blurb": "He might be indebted to the new Denver OC for calling an absolutely horrendous game and giving RJ Harvey just enough touches to squeak out a win against Brandon in what was by far the closest matchup of the week. Unfortunately, Kyler Murray doesn't know how to slide correctly and nearly had his head ripped off. Kyler will be back sooner rather than later, but he was struggling even before the concussion."
+        },
+        {
+          "rank": 3,
+          "previous_rank": 3,
+          "team": "Honey, I'm Mahomes",
+          "manager": "BadmanHoots",
+          "current_record": "1-0",
+          "blurb": "I got a little worried about Mahomes coming off the ACL and played Willis over him. Won't be making that mistake again. Patrick Mahomes is Patrick Mahomes, and if this is him in Week 1, I think he'll be a top-10 option again. Plus, the game script limited the passing game. I pray Carson Wentz is announced as the full-time starter if Jefferson is going to score 27 points a game."
+        },
+        {
+          "rank": 4,
+          "previous_rank": 5,
+          "team": "Whatre u doin step Burrow",
+          "manager": "BromanXVIII",
+          "current_record": "0-1",
+          "blurb": "In a heartbreaking loss to AZ, Brandon was third in scoring with 160 points. I mentioned this team could surprise people in the postseason, but I was wrong. This team is going to be expected to win those games. One note: the Bears D looks like it has gotten a lot worse after losing several starters from their secondary, so I don't think we saw the true version of Bryce Young with his 38 points. On the flip side, Jadarian Price looked pretty good despite only scoring 6 points."
+        },
+        {
+          "rank": 5,
+          "previous_rank": 4,
+          "team": "The Gofffather",
+          "manager": "Dirico32",
+          "current_record": "1-0",
+          "blurb": "What a tragic start to the season. Sam Darnold was doing his best Aaron Rodgers impersonation on Wednesday night, AJ Brown randomly suffered an ankle sprain early during Thursday's game, and then, after having the best half of his life, Zay Flowers went down with a hammy. Unfortunately, AJ Brown is on IR, but it sounds like the other two may have avoided major injury. Fortunately for David, he has one of the deepest benches in the league."
+        },
+        {
+          "rank": 6,
+          "previous_rank": 9,
+          "team": "Ben Johnson's Tight End",
+          "manager": "Hootsjr",
+          "current_record": "1-0",
+          "blurb": "After the heist that occurred hours before the season began, I have no choice but to move Ben up the rankings. It seems that Derrick Henry is still going to be able to do it another year, and an RB was what this team needed. It sounds like Ladd McConkey avoided major injury, and Loveland will surely not have another bagel. Cam Ward still sucks, though."
+        },
+        {
+          "rank": 7,
+          "previous_rank": 6,
+          "team": "Shake 'n Baker",
+          "manager": "DickSlaughter69",
+          "current_record": "0-1",
+          "blurb": "In a week where most managers had several players outscore their projections, Mason drew the short straw. Hopefully, Atlanta can figure out their QB situation, cause Mason's already fed up with Drake London after one week. Don't believe me, just look at the trade block. I do think there are brighter weeks ahead."
+        },
+        {
+          "rank": 8,
+          "previous_rank": 7,
+          "team": "PERFECT TIMING",
+          "manager": "reedjamesjr",
+          "current_record": "0-1",
+          "blurb": "The lowest-scoring team of the week, I think there are real concerns about this team. It seems like Gibbs and Chase both have to pop off to get this team over the edge on a weekly basis, and that just didn't pan out this week. Add the fact that Calvin Ridley didn't record a single target, and I'm not certain who on the bench can be relied upon to replace him in that final flex spot."
+        },
+        {
+          "rank": 9,
+          "previous_rank": 8,
+          "team": "British Broncos",
+          "manager": "conlure",
+          "current_record": "0-1",
+          "blurb": "Several things worked against Connor's team this week. The Rams forgot that Adams is a beast at the goal line, CMC got cramps and was out-carried by a rookie, Pitts laid an egg with Cooper Rush throwing the ball, and training-camp standout, rookie De'Zhaun Stribling, suffered an ankle sprain that is going to sideline him for at least a month."
+        },
+        {
+          "rank": 10,
+          "previous_rank": 11,
+          "team": "Drunk Darts",
+          "manager": "youngshledon",
+          "current_record": "1-0",
+          "blurb": "Huge week for Jackson, with his QBs combining for nearly 60 points and Swift getting 3 TDs. I do think this team will come back down to earth, but it was a great way to start the season nonetheless. Also, it was promising to see Kenyon Sadiq get scripted plays and score his first NFL TD on an end-around run."
+        },
+        {
+          "rank": 11,
+          "previous_rank": 12,
+          "team": "The Stroud Goes Wild",
+          "manager": "MrBroadbent13",
+          "current_record": "1-0",
+          "blurb": "Similar to Jackson's team, Andrew's QBs were personally offended by my preseason rankings and decided to absolutely pop off, scoring a combined 64 points. An impressive week, but I just don't think it's sustainable. On the bright side, Henderson was seen back at practice today, only for Andrew to immediately put him on the block."
+        },
+        {
+          "rank": 12,
+          "previous_rank": 10,
+          "team": "Inglorious Staffords",
+          "manager": "ChickenChooker",
+          "current_record": "0-1",
+          "blurb": "Trading away Derrick Henry is a move you only make if you don't expect to contend this year. Monangai did score 19 points, but most of that came from one explosive TD run after the Bears started to run out the clock. Stafford looked like he forgot how to play football, and Waddle was a victim of the horrible play-calling during MNF. I suspect both will get back on track, but even with them returning to normal, I just don't know if this team is going to be getting many wins."
+        }
+      ],
+      "match_of_week": {
+        "matchup": "The Gofffather vs. British Broncos",
+        "team_a": "The Gofffather",
+        "team_b": "British Broncos",
+        "poll_id": "week1-reaction-motw",
+        "blurb": "I don't intend to repeat managers in back-to-back weeks often, but to me this game has the most at stake. It's the only matchup where both managers are 0-1, and one of these two teams is going to fall to a nasty 0-2 start to the season. Can David's players stay on their two feet? Will Stafford remember Adams exists? We'll find out!",
+        "final_result": {
+          "team_a_votes": 4,
+          "team_b_votes": 7
+        }
+      }
+    },
+    {
+      "headline": "2026 Kickoff",
+      "date": "Wednesday, September 9th, 2026",
+      "intro": "To kick off the season, I've put together my personal power rankings, along with a few notes on each team. These rankings are purely my opinion and are not personal. More than anything, I'm just excited that football season is back.",
+      "power_rankings": [
+        {
+          "rank": 1,
+          "team": "Egbuka Bukkake",
+          "manager": "GingerBeard40",
+          "last_record": "6-8",
+          "projected_record": "10-4",
+          "blurb": "Congrats on being a father, Wes! That's the second most impressive thing you've done lately, right after landing at number 1 on the preseason power rankings. After an underperforming season last year, I\u2019m predicting Wes to win it all. This team has it all: two young QBs who have already proved themselves in Nix and Daniels, a top-end RB with both his ACLs intact after a scary preseason practice scare, Mr. Consistency leading his WR room, and only the best TE in fantasy football. If Jayden Daniels returns to his rookie season self and Nabers can stay healthy, there's no way he isn't dancing at the end of the season."
+        },
+        {
+          "rank": 2,
+          "team": "Rome Wznt Built in Odunze",
+          "manager": "satterfieldaz",
+          "last_record": "7-7",
+          "projected_record": "10-4",
+          "blurb": "After finishing second in points for and somehow missing the playoffs last season, I have to imagine AZ is coming into the season with a chip on his shoulder. With Josh Allen, JSN, and Trey McBride leading the way, this team could honestly go undefeated. I think the biggest questions are whether Kyler Murray can succeed in O'Connell's offense and whether an RB can separate himself from crowded rooms to provide a consistent RB2 (see Brooks, Harvey, Warren, Spears)."
+        },
+        {
+          "rank": 3,
+          "team": "Honey, I'm Mahomes",
+          "manager": "BadmanHoots",
+          "last_record": "11-3",
+          "projected_record": "9-5",
+          "blurb": "Ya boy came away with the championship last year after admittedly getting a little lucky down the stretch. Looking forward to making a strong run this season to potentially go back-to-back. Unfortunately for me, Mahomes won't be running the ball quite as much after his season-ending ACL tear last season, and Maye will actually be going against some proven secondaries. As a Packers fan, it's been a rollercoaster these last few weeks with Josh Jacobs being put on the Commissioner's List. While that is horrible for the Pack, I've been stashing future RB1 MarShawn Lloyd on my bench since the startup draft and it might just pay off for me."
+        },
+        {
+          "rank": 4,
+          "team": "The Gofffather",
+          "manager": "Dirico32",
+          "last_record": "8-6",
+          "projected_record": "8-6",
+          "blurb": "Runner-up a year ago, David's team is led by Bijan Robinson and a fairly deep WR room. He might have the safest QB room to get you two 18-point performances, but I have a hard time imagining any of these three is going to eclipse top 5 on the season. The glaring issue with this team is the TE room. I think most people thought that Gadsden was an up-and-coming star for Herbert and the Chargers, but then they went and brought in Njoku and Kolar. Evan Engram is several years removed from his peak, and though Max Klare may develop into a future TE1, he's stuck in a crowded room in LA at the moment."
+        },
+        {
+          "rank": 5,
+          "team": "Whatre u doin step Burrow",
+          "manager": "BromanXVIII",
+          "last_record": "6-8",
+          "projected_record": "7-7",
+          "blurb": "The inaugural champ had a lackluster season last year, and if you had asked me a couple of weeks ago, I would have said this season might look more like 2025 than 2024. And then Brandon made a trade that landed him Nico Collins and a seemingly Week 1-ready George Kittle. There's a lot that could go wrong with this team, but that means a lot could go right too. If Burrow and Olave can stay healthy, I think this is going to be a solid team that will surprise some people in the playoffs."
+        },
+        {
+          "rank": 6,
+          "team": "Shake 'n Baker",
+          "manager": "DickSlaughter69",
+          "last_record": "7-7",
+          "projected_record": "8-6",
+          "blurb": "One of the more active managers this offseason, Mason has put his team in position to make a run for a trophy after acquiring Baker, Mike Evans, Luther Burden, and Tucker Kraft. The biggest blow to this team is the aforementioned questionable availability of Josh Jacobs. I'm not sure about the long-term outlook for this team with seasoned vets like Evans and Kelce, but it's clear that Mason is positioning for a run this season."
+        },
+        {
+          "rank": 7,
+          "team": "PERFECT TIMING",
+          "manager": "reedjamesjr",
+          "last_record": "7-7",
+          "projected_record": "7-7",
+          "blurb": "It pains me to rank Reed\u2019s team this low with probably the best RB and WR in Gibbs and Chase, but when your QB2 is old man A-Aron, I have no choice. In a world where Shedeur becomes the starting QB in Cleveland (and keeps the job), this ranking might be too low. I'd be torn as a Cowboys fan with Pickens staying in Dallas. He's going to help the team for sure, but will he and CeeDee cannibalize each other over targets? I expect Brian Thomas to have a bounce-back season, though, and Tyler Warren is probably going to lead the Colts in receptions."
+        },
+        {
+          "rank": 8,
+          "team": "British Broncos",
+          "manager": "conlure",
+          "last_record": "11-3",
+          "projected_record": "6-8",
+          "blurb": "I'm honestly surprised I'm ranking Connor's team this low, especially after coming off an 11-3 record last season. This team has the QB and RB rooms to dominate, but I suspect Jonathan Taylor and Davante Adams will both regress in touchdowns. I think KC Concepcion is going to be great in the long run, but unfortunately he landed in the QB freak show that is Cleveland, with another high-draft-capital WR in Denzel Boston. But hey, maybe Stribling is the truth and Kyle Pitts can keep shelling out 40+ point games."
+        },
+        {
+          "rank": 9,
+          "team": "Ben Johnson's Tight End",
+          "manager": "Hootsjr",
+          "last_record": "6-8",
+          "projected_record": "6-8",
+          "blurb": "Ben's team has arguably the best WR room and the worst RB room. Maybe Jonah Coleman carves out a role in Denver as the year goes on, but until then, I just don't know who on this roster is going to be RB2 behind Rico Dowdle. I think the QB room is hopeful for future seasons, but to have a chance this year, either Ward needs to take a step forward or Mendoza needs to come out swinging sooner rather than later. And if this team's namesake were to go down with an injury, the TE room is shot. Kmet might get some targets, but the receivers are going to get more of them than Kmet will. And Hockenson is a shell of his former self."
+        },
+        {
+          "rank": 10,
+          "team": "Inglorious Staffords",
+          "manager": "ChickenChooker",
+          "last_record": "9-5",
+          "projected_record": "5-9",
+          "blurb": "JT was probably the luckiest manager last year, squeaking out 9 wins and the third-best record while having the 5th-worst points for. There are several players I like on the roster, including Javonte Williams, Travis Etienne Jr., and Jaylen Waddle, but it's also the oldest roster by average age at 28.5 years (Conlure second-oldest at 27.5). If he doesn't come out with a hot start, I wouldn't be surprised if he tries moving some veterans for picks."
+        },
+        {
+          "rank": 11,
+          "team": "Drunk Darts",
+          "manager": "youngshledon",
+          "last_record": "1-13",
+          "projected_record": "5-9",
+          "blurb": "Last year's record doesn't look good, but it's worth noting that Jackson's opponents had the highest points for in the league last season, with 141.69 points (nice). There are just too many open questions about the players on this roster for me to believe this team can win more than 5 or 6 games. How many targets is CeeDee going to lose to Pickens? Is Kenyon Sadiq going to be up to speed after missing camp? Is Jaxon Dart going to have his head crushed between Aaron Donald and Myles Garrett in Week 2 because he refuses to protect himself? While I don't think he's going to be dancing this year, I do think the depth of his RB room will likely get him a couple of wins and could potentially serve as trade fodder for future picks."
+        },
+        {
+          "rank": 12,
+          "team": "The Stroud Goes Wild",
+          "manager": "MrBroadbent13",
+          "last_record": "5-9",
+          "projected_record": "4-10",
+          "blurb": "After a much-improved 5-win season last year following a winless 2024, I have Andrew's team falling back down to the bottom of the leaderboard. Though this team had the 9th-most points for last season, it was next-to-last in max points for, with 89.2% lineup efficiency. In non-stats language, Andrew squeezed this team dry. Though he did manage to get the 1.01 and draft the far-and-away best prospect in Jeremiyah Love, all indications are that Arizona will be using him in a committee, at least this year. With several offseason trades that, to me, point toward kicking the can down the road a few years, I just don't see a world where this team can compete year round."
+        }
+      ],
+      "match_of_week": {
+        "matchup": "Honey, I'm Mahomes vs. British Broncos",
+        "team_a": "Honey, I'm Mahomes",
+        "team_b": "British Broncos",
+        "poll_id": "2026-kickoff-motw",
+        "blurb": "Yes, I'm selfishly making my own game the Matchup of the Week. Connor and I are going to put on a show for all of you to kick off the season. We're both coming off 11-3 campaigns and enter the week with the highest projected point total of any matchup. Though Connor has three players playing Thursday night, including CMC, I have the Mahomes/Rice stack on Monday night. This one will probably come down to the wire.",
+        "final_result": {
+          "team_a_votes": 2,
+          "team_b_votes": 1
+        }
+      }
+    }
+  ]
+}
