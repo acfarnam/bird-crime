@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager — Bird Crime</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="site-header" class="site-header"></header>
+
+<main>
+  <div class="wrap">
+    <a class="back-link" href="managers.html">&larr; Back to Managers</a>
+
+    <div id="champion-banner-wrap"></div>
+
+    <div id="profile-header-wrap">
+      <p class="loading-note">Loading…</p>
+    </div>
+
+    <div id="profile-body"></div>
+  </div>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/main.js"></script>
+<script src="js/data.js"></script>
+<script>
+(async function () {
+  initChrome(""); // no nav tab active on a detail page
+
+  const bannerWrap = document.getElementById("champion-banner-wrap");
+  const headerWrap = document.getElementById("profile-header-wrap");
+  const body = document.getElementById("profile-body");
+
+  const params = new URLSearchParams(location.search);
+  const id = params.get("id");
+
+  let data;
+  try {
+    data = await loadLeagueData();
+  } catch (err) {
+    showError(headerWrap);
+    return;
+  }
+
+  const { managers, seasons } = data;
+  const m = managerById(managers, id);
+
+  if (!m) {
+    headerWrap.innerHTML = `<p class="error-note">No manager found for that link.</p>`;
+    return;
+  }
+
+  let extras = {};
+  try {
+    const res = await fetch("data/manager_extras.json");
+    if (res.ok) extras = await res.json();
+  } catch (e) { /* not present */ }
+  const extra = extras[m.user_id] || {};
+
+  let currentRosters = {};
+  try {
+    const res = await fetch("data/current_rosters.json");
+    if (res.ok) currentRosters = await res.json();
+  } catch (e) { /* not generated yet */ }
+  const rosterInfo = currentRosters[m.user_id];
+
+  const av = avatarUrl(m.avatar);
+  const at = m.all_time;
+  const pr = m.playoff_record;
+  const latestSeason = Object.keys(m.seasons).sort().pop();
+  const currentTeam = teamNameFor(m, latestSeason);
+
+  // Championship banners — waving flags for each year this manager won it all
+  if (at.championships.length > 0) {
+    const flags = at.championships.slice().reverse().map(year => {
+      const sd = seasons[year];
+      const row = sd ? sd.standings.find(r => r.owner_id === m.user_id) : null;
+      const record = row ? `${row.wins}-${row.losses}` : "";
+      return `
+        <div class="pennant">
+          <div class="rod"></div>
+          <div class="flag">
+            <div class="year">${year}</div>
+            <div class="team">"${teamNameFor(m, year)}"</div>
+            <div class="record">${record}</div>
+          </div>
+        </div>
+      `;
+    }).join("");
+    bannerWrap.innerHTML = `<div class="pennant-band" style="margin-bottom:24px;"><div class="pennant-row">${flags}</div></div>`;
+  }
+
+  headerWrap.innerHTML = `
+    <div class="profile-header">
+      <div class="profile-avatar">${av ? `<img src="${av}" alt="">` : initials(m.display_name)}</div>
+      <div>
+        <h1 class="page-title" style="margin-bottom:2px;">${extra.real_name ? `${extra.real_name} - ${m.display_name}` : m.display_name}</h1>
+        <div class="team">"${currentTeam}"${m.is_current ? "" : ' <span class="badge retired">RETIRED</span>'}</div>
+      </div>
+    </div>
+  `;
+
+  const bioHtml = (extra.bio_bullets && extra.bio_bullets.length)
+    ? `<ul class="rules-list" style="margin:0; font-size:15px; line-height:1.7;">${extra.bio_bullets.map(b => `<li>${b}</li>`).join("")}</ul>`
+    : `<p class="empty">No bio yet.</p>`;
+
+  const posOrder = ["QB", "RB", "WR", "TE", "K", "DEF", "OTHER"];
+  let rosterHtml = `<p class="loading-note">No current roster data on file yet.</p>`;
+  if (rosterInfo) {
+    const cols = posOrder.filter(pos => rosterInfo.by_position[pos] && rosterInfo.by_position[pos].length > 0).map(pos => {
+      const players = rosterInfo.by_position[pos];
+      const items = players.map(p => `<li>${p.name}</li>`).join("");
+      return `<div class="card position-col"><h4>${pos}</h4><ul>${items}</ul></div>`;
+    }).join("");
+    rosterHtml = `<div class="roster-position-grid">${cols || '<p class="loading-note">No players on this roster.</p>'}</div>`;
+  }
+
+  let picksHtml = `<p class="loading-note">No draft pick data on file yet.</p>`;
+  if (rosterInfo && rosterInfo.picks_owned) {
+    const owned = rosterInfo.picks_owned.map(p =>
+      p.is_own
+        ? `<span class="pick-chip">${p.label}</span>`
+        : `<span class="pick-chip acquired">${p.label} <span style="color:var(--muted);">(from ${p.original_owner})</span></span>`
+    ).join("");
+    const tradedAway = (rosterInfo.picks_traded_away || []).map(p =>
+      `<span class="pick-chip traded-away">${p.label} <span style="color:var(--muted);">(to ${p.new_owner})</span></span>`
+    ).join("");
+    picksHtml = `
+      <div class="picks-list">${owned}</div>
+      ${tradedAway ? `<p class="rules-note" style="margin:14px 0 8px;">Traded away:</p><div class="picks-list">${tradedAway}</div>` : ""}
+    `;
+  }
+
+  body.innerHTML = `
+    <div class="card bio-card">${bioHtml}</div>
+
+    <section class="section-wrap">
+      <div class="section-banner">Stats</div>
+      <div class="profile-stat-grid">
+        <div class="card profile-stat-card"><div class="num">${at.wins}-${at.losses}${at.ties ? `-${at.ties}` : ""}</div><div class="lbl">All-Time Record</div></div>
+        <div class="card profile-stat-card"><div class="num">${(at.win_pct * 100).toFixed(1)}%</div><div class="lbl">Win %</div></div>
+        <div class="card profile-stat-card"><div class="num">${at.ppg.toFixed(2)}</div><div class="lbl">PF / Game</div></div>
+        <div class="card profile-stat-card"><div class="num">${pr.wins}-${pr.losses}</div><div class="lbl">Playoff Record</div></div>
+        <div class="card profile-stat-card"><div class="num">${at.championships.length}</div><div class="lbl">Championships</div></div>
+        <div class="card profile-stat-card"><div class="num">${m.first_season}</div><div class="lbl">First Season</div></div>
+      </div>
+    </section>
+
+    <section class="section-wrap">
+      <div class="section-banner">Current Team</div>
+      ${rosterHtml}
+    </section>
+
+    <section class="section-wrap">
+      <div class="section-banner">Draft Picks</div>
+      <div class="card" style="padding:18px 20px;">${picksHtml}</div>
+    </section>
+
+    <section class="section-wrap">
+      <div class="section-banner">Favorite NFL Team</div>
+      <div class="card" style="padding:16px 20px;">
+        <p style="margin:0; font-size:14px;">${extra.favorite_nfl_team || "—"}</p>
+      </div>
+    </section>
+  `;
+})();
+</script>
+</body>
+</html>
