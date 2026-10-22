@@ -1,0 +1,446 @@
+[
+  {
+    "user_id": "81600624009297920",
+    "display_name": "GingerBeard40",
+    "avatar": null,
+    "seasons": {
+      "2024": {
+        "team_name": "Ginger Beard Men"
+      },
+      "2025": {
+        "team_name": "Ginger Beard Men"
+      },
+      "2026": {
+        "team_name": "Egbuka Bukkake"
+      }
+    },
+    "first_season": "2024",
+    "is_current": true,
+    "all_time": {
+      "wins": 15,
+      "losses": 13,
+      "ties": 0,
+      "win_pct": 0.536,
+      "points_for": 3403.66,
+      "points_against": 3482.6,
+      "ppg": 121.56,
+      "papg": 124.38,
+      "championships": [],
+      "runner_ups": [],
+      "third_places": [
+        "2024"
+      ],
+      "podium_finishes": 1
+    },
+    "playoff_record": {
+      "wins": 2,
+      "losses": 1
+    }
+  },
+  {
+    "user_id": "410257586844073984",
+    "display_name": "ChickenChooker",
+    "avatar": null,
+    "seasons": {
+      "2024": {
+        "team_name": "Leroy Jenkins"
+      },
+      "2025": {
+        "team_name": "Leroy Jenkins"
+      },
+      "2026": {
+        "team_name": "Inglorious Staffords"
+      }
+    },
+    "first_season": "2024",
+    "is_current": true,
+    "all_time": {
+      "wins": 18,
+      "losses": 10,
+      "ties": 0,
+      "win_pct": 0.643,
+      "points_for": 3604.72,
+      "points_against": 3321.52,
+      "ppg": 128.74,
+      "papg": 118.63,
+      "championships": [],
+      "runner_ups": [],
+      "third_places": [],
+      "podium_finishes": 0
+    },
+    "playoff_record": {
+      "wins": 2,
+      "losses": 3
+    }
+  },
+  {
+    "user_id": "426481399462117376",
+    "display_name": "Hootsjr",
+    "avatar": null,
+    "seasons": {
+      "2024": {
+        "team_name": "Hootsjr"
+      },
+      "2025": {
+        "team_name": "Ben Johnson's Tight End"
+      },
+      "2026": {
+        "team_name": "Ben Johnson's Tight End"
+      }
+    },
+    "first_season": "2024",
+    "is_current": true,
+    "all_time": {
+      "wins": 12,
+      "losses": 16,
+      "ties": 0,
+      "win_pct": 0.429,
+      "points_for": 3417.44,
+      "points_against": 3745.4,
+      "ppg": 122.05,
+      "papg": 133.76,
+      "championships": [],
+      "runner_ups": [],
+      "third_places": [],
+      "podium_finishes": 0
+    },
+    "playoff_record": {
+      "wins": 0,
+      "losses": 0
+    }
+  },
+  {
+    "user_id": "470768656427511808",
+    "display_name": "Dirico32",
+    "avatar": null,
+    "seasons": {
+      "2024": {
+        "team_name": "Dirico32"
+      },
+      "2025": {
+        "team_name": "The Gofffather"
+      },
+      "2026": {
+        "team_name": "The Gofffather"
+      }
+    },
+    "first_season": "2024",
+    "is_current": true,
+    "all_time": {
+      "wins": 14,
+      "losses": 14,
+      "ties": 0,
+      "win_pct": 0.5,
+      "points_for": 3766.66,
+      "points_against": 3692.26,
+      "ppg": 134.52,
+      "papg": 131.87,
+      "championships": [],
+      "runner_ups": [
+        "2025"
+      ],
+      "third_places": [],
+      "podium_finishes": 1
+    },
+    "playoff_record": {
+      "wins": 2,
+      "losses": 1
+    }
+  },
+  {
+    "user_id": "531218982082400256",
+    "display_name": "conlure",
+    "avatar": null,
+    "seasons": {
+      "2024": {
+        "team_name": "conlure"
+      },
+      "2025": {
+        "team_name": "conlure"
+      },
+      "2026": {
+        "team_name": "British Broncos"
+      }
+    },
+    "first_season": "2024",
+    "is_current": true,
+    "all_time": {
+      "wins": 18,
+      "losses": 10,
+      "ties": 0,
+      "win_pct": 0.643,
+      "points_for": 3808.14,
+      "points_against": 3529.64,
+      "ppg": 136.01,
+      "papg": 126.06,
+      "championships": [],
+      "runner_ups": [],
+      "third_places": [
+        "2025"
+      ],
+      "podium_finishes": 1
+    },
+    "playoff_record": {
+      "wins": 1,
+      "losses": 1
+    }
+  },
+  {
+    "user_id": "576591884302987264",
+    "display_name": "BadmanHoots",
+    "avatar": null,
+    "seasons": {
+      "2024": {
+        "team_name": "Honey, I'm Mahomes"
+      },
+      "2025": {
+        "team_name": "Honey, I'm Mahomes"
+      },
+      "2026": {
+        "team_name": "Honey, I'm Mahomes"
+      }
+    },
+    "first_season": "2024",
+    "is_current": true,
+    "all_time": {
+      "wins": 16,
+      "losses": 12,
+      "ties": 0,
+      "win_pct": 0.571,
+      "points_for": 3593.78,
+      "points_against": 3373.0,
+      "ppg": 128.35,
+      "papg": 120.46,
+      "championships": [
+        "2025"
+      ],
+      "runner_ups": [],
+      "third_places": [],
+      "podium_finishes": 1
+    },
+    "playoff_record": {
+      "wins": 2,
+      "losses": 0
+    }
+  },
+  {
+    "user_id": "604558405637562368",
+    "display_name": "DickSlaughter69",
+    "avatar": null,
+    "seasons": {
+      "2024": {
+        "team_name": "DickSlaughter69"
+      },
+      "2025": {
+        "team_name": "Puke nukem"
+      },
+      "2026": {
+        "team_name": "Shake n' Baker"
+      }
+    },
+    "first_season": "2024",
+    "is_current": true,
+    "all_time": {
+      "wins": 16,
+      "losses": 12,
+      "ties": 0,
+      "win_pct": 0.571,
+      "points_for": 3551.68,
+      "points_against": 3416.64,
+      "ppg": 126.85,
+      "papg": 122.02,
+      "championships": [],
+      "runner_ups": [],
+      "third_places": [],
+      "podium_finishes": 0
+    },
+    "playoff_record": {
+      "wins": 1,
+      "losses": 4
+    }
+  },
+  {
+    "user_id": "606214229866909696",
+    "display_name": "MrBroadbent13",
+    "avatar": null,
+    "seasons": {
+      "2024": {
+        "team_name": "The Stroud Goes Wild"
+      },
+      "2025": {
+        "team_name": "The Stroud Goes Wild"
+      },
+      "2026": {
+        "team_name": "The Stroud Goes Wild"
+      }
+    },
+    "first_season": "2024",
+    "is_current": true,
+    "all_time": {
+      "wins": 5,
+      "losses": 23,
+      "ties": 0,
+      "win_pct": 0.179,
+      "points_for": 2992.05,
+      "points_against": 3708.14,
+      "ppg": 106.86,
+      "papg": 132.43,
+      "championships": [],
+      "runner_ups": [],
+      "third_places": [],
+      "podium_finishes": 0
+    },
+    "playoff_record": {
+      "wins": 0,
+      "losses": 0
+    }
+  },
+  {
+    "user_id": "657042154346082304",
+    "display_name": "youngshledon",
+    "avatar": null,
+    "seasons": {
+      "2024": {
+        "team_name": "youngshledon"
+      },
+      "2025": {
+        "team_name": "Drunk Darts"
+      },
+      "2026": {
+        "team_name": "Drunk Darts"
+      }
+    },
+    "first_season": "2024",
+    "is_current": true,
+    "all_time": {
+      "wins": 7,
+      "losses": 21,
+      "ties": 0,
+      "win_pct": 0.25,
+      "points_for": 3296.38,
+      "points_against": 3725.64,
+      "ppg": 117.73,
+      "papg": 133.06,
+      "championships": [],
+      "runner_ups": [],
+      "third_places": [],
+      "podium_finishes": 0
+    },
+    "playoff_record": {
+      "wins": 0,
+      "losses": 0
+    }
+  },
+  {
+    "user_id": "991866326018736128",
+    "display_name": "BromanXVIII",
+    "avatar": null,
+    "seasons": {
+      "2024": {
+        "team_name": "Kicker? Hardly knew her"
+      },
+      "2025": {
+        "team_name": "Whatre u doin step Burrow"
+      },
+      "2026": {
+        "team_name": "Whatre u doin step Burrow"
+      }
+    },
+    "first_season": "2024",
+    "is_current": true,
+    "all_time": {
+      "wins": 16,
+      "losses": 12,
+      "ties": 0,
+      "win_pct": 0.571,
+      "points_for": 3569.78,
+      "points_against": 3403.52,
+      "ppg": 127.49,
+      "papg": 121.55,
+      "championships": [
+        "2024"
+      ],
+      "runner_ups": [],
+      "third_places": [],
+      "podium_finishes": 1
+    },
+    "playoff_record": {
+      "wins": 2,
+      "losses": 0
+    }
+  },
+  {
+    "user_id": "992221996681412608",
+    "display_name": "satterfieldaz",
+    "avatar": null,
+    "seasons": {
+      "2024": {
+        "team_name": "Rome Wznt Built in Odunze"
+      },
+      "2025": {
+        "team_name": "Rome Wznt Built in Odunze"
+      },
+      "2026": {
+        "team_name": "Rome Wznt Built in Odunze"
+      }
+    },
+    "first_season": "2024",
+    "is_current": true,
+    "all_time": {
+      "wins": 14,
+      "losses": 14,
+      "ties": 0,
+      "win_pct": 0.5,
+      "points_for": 3785.74,
+      "points_against": 3700.42,
+      "ppg": 135.2,
+      "papg": 132.16,
+      "championships": [],
+      "runner_ups": [],
+      "third_places": [],
+      "podium_finishes": 0
+    },
+    "playoff_record": {
+      "wins": 0,
+      "losses": 2
+    }
+  },
+  {
+    "user_id": "992430958571819008",
+    "display_name": "reedjamesjr",
+    "avatar": null,
+    "seasons": {
+      "2024": {
+        "team_name": "reedjamesjr"
+      },
+      "2025": {
+        "team_name": "PERFECT TIMING"
+      },
+      "2026": {
+        "team_name": "PERFECT TIMING"
+      }
+    },
+    "first_season": "2024",
+    "is_current": true,
+    "all_time": {
+      "wins": 17,
+      "losses": 11,
+      "ties": 0,
+      "win_pct": 0.607,
+      "points_for": 3753.18,
+      "points_against": 3444.44,
+      "ppg": 134.04,
+      "papg": 123.02,
+      "championships": [],
+      "runner_ups": [
+        "2024"
+      ],
+      "third_places": [],
+      "podium_finishes": 1
+    },
+    "playoff_record": {
+      "wins": 2,
+      "losses": 2
+    }
+  }
+]

@@ -1,0 +1,108 @@
+{
+  "general_settings": [
+    {"label": "Number of Teams", "value": "12"},
+    {"label": "Scoring Type", "value": "Superflex, Half-PPR, TE Premium"},
+    {"label": "Start-Up Draft", "value": "Snake (with 3rd round reversal)"},
+    {"label": "Rookie Draft", "value": "Linear"},
+    {"label": "Waiver System", "value": "FAAB"},
+    {"label": "Trade Deadline", "value": "Week 14"},
+    {"label": "Playoff Format", "value": "Top 6 teams, Weeks 15-17"}
+  ],
+  "dues_and_payouts": {
+    "dues": [
+      {"label": "Entry Fee", "value": "$50 per team"},
+      {"label": "Due Date", "value": "Prior to Week 1"}
+    ],
+    "payouts": [
+      {"place": "1st Place", "amount": "$300"},
+      {"place": "2nd Place", "amount": "$150"},
+      {"place": "3rd Place", "amount": "$100"},
+      {"place": "4th Place", "amount": "$50"}
+    ]
+  },
+  "draft": {
+    "startup": [
+      "Begins with a snake draft featuring a third-round reversal.",
+      "Draft positions are assigned randomly."
+    ],
+    "rookie": [
+      "Held each subsequent season, within two weeks of the regular season start date.",
+      "Draft order is based on the previous year's standings:",
+      "Picks 1-6: non-playoff teams, assigned in reverse order of max points for (lowest PF picks first).",
+      "Picks 7-12: playoff teams, assigned in reverse order of playoff finish."
+    ]
+  },
+  "roster": {
+    "slots": [
+      {"position": "QB", "count": 1},
+      {"position": "RB", "count": 2},
+      {"position": "WR", "count": 2},
+      {"position": "TE", "count": 1},
+      {"position": "FLEX", "count": 3},
+      {"position": "SUPERFLEX", "count": 1},
+      {"position": "Bench", "count": 15},
+      {"position": "IR", "count": 3},
+      {"position": "Taxi", "count": 4}
+    ],
+    "starting_lineup_total": 10,
+    "notes": [
+      "Taxi squad spots can only be filled with rookie and second-year players.",
+      "Once a player is moved off the taxi squad, they cannot be placed back on it.",
+      "Players may stay on the taxi squad for a maximum of two years."
+    ]
+  },
+  "scoring": {
+    "passing": [
+      {"stat": "Passing Yards", "points": "1 pt / 25 yds"},
+      {"stat": "Passing TD", "points": "6"},
+      {"stat": "Two-Point Conversion", "points": "2"},
+      {"stat": "Interception", "points": "-1"}
+    ],
+    "rushing": [
+      {"stat": "Rushing Yards", "points": "1 pt / 10 yds"},
+      {"stat": "Rushing TD", "points": "6"},
+      {"stat": "Two-Point Conversion", "points": "2"}
+    ],
+    "receiving": [
+      {"stat": "Reception", "points": "0.5"},
+      {"stat": "Receiving Yards", "points": "1 pt / 10 yds"},
+      {"stat": "Receiving TD", "points": "6"},
+      {"stat": "Two-Point Conversion", "points": "2"},
+      {"stat": "TE Reception (Premium)", "points": "+0.5 extra"}
+    ],
+    "misc": [
+      {"stat": "Fumble", "points": "-1"},
+      {"stat": "Fumble Lost", "points": "-1"}
+    ]
+  },
+  "waivers": [
+    "Annual FAAB budget of $200.",
+    "Minimum bid of $0.",
+    "Waivers clear Wednesdays at 12:00 PM CST.",
+    "Ties go to waiver wire priority.",
+    "Current-year FAAB budget may be traded.",
+    "Dropped players remain on waivers for one day."
+  ],
+  "playoffs": {
+    "structure": [
+      "Top 6 teams from the regular season qualify.",
+      "Tiebreaker 1: head-to-head record.",
+      "Tiebreaker 2: total regular season points.",
+      "Seeds 1 and 2 receive a first-round bye."
+    ],
+    "bracket": [
+      {"round": "Quarterfinals", "matchups": ["Seed 3 vs Seed 6", "Seed 4 vs Seed 5", "Seed 1 & 2: BYE"]},
+      {"round": "Semifinals", "matchups": ["Seed 1 vs lowest remaining seed", "Seed 2 vs remaining seed"]},
+      {"round": "Championship", "matchups": ["Winners of semifinal games"]}
+    ]
+  },
+  "amendments": {
+    "process": [
+      "Any manager may propose an amendment; it must receive a second before being voted on by all managers.",
+      "Amendments are voted on in the week leading up to each rookie draft.",
+      "An amendment needs 7 votes in favor to pass."
+    ],
+    "passed": []
+  },
+  "history_note": "League established in 2024 (Year 1)."
+}
