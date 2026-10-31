@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Records — Bird Crime</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="site-header" class="site-header"></header>
+
+<main>
+  <div class="wrap">
+    <h1 class="page-title">Records</h1>
+    <p class="page-lede">Career totals or single-season splits. Click any column header to sort.</p>
+
+    <div id="view-picker" class="season-picker"></div>
+
+    <div id="records-table-wrap" class="table-card card">
+      <p class="loading-note">Loading…</p>
+    </div>
+
+    <div class="retired-subsection" id="retired-section" style="display:none;">
+      <p class="retired-subhead">Retired Managers — no longer in the league, records preserved for the record</p>
+      <div id="retired-table-wrap" class="table-card card"></div>
+    </div>
+
+    <section class="section-wrap" style="margin-top:52px;" aria-labelledby="h2h-head">
+      <div class="section-banner" id="h2h-head">Head-to-Head Matrix <span class="tag">All-Time, Every Season On File</span></div>
+      <div id="h2h-body">
+        <p class="loading-note">Loading…</p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/main.js"></script>
+<script src="js/data.js"></script>
+<script>
+function fmtNum(value, decimals = 2) {
+  if (value == null || Number.isNaN(value)) return "—";
+  return value.toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+}
+
+(async function () {
+  initChrome("records.html");
+  const pickerEl = document.getElementById("view-picker");
+  const wrap = document.getElementById("records-table-wrap");
+  const retiredSection = document.getElementById("retired-section");
+  const retiredWrap = document.getElementById("retired-table-wrap");
+
+  let data;
+  try {
+    data = await loadLeagueData();
+  } catch (err) {
+    showError(wrap);
+    return;
+  }
+
+  const { managers, seasons, allSeasons } = data;
+  const currentManagers = managers.filter(m => m.is_current);
+  const retiredManagers = managers.filter(m => !m.is_current);
+
+  let efficiencyData = { by_season: {}, career: {} };
+  try {
+    const res = await fetch("data/lineup_efficiency.json");
+    if (res.ok) efficiencyData = await res.json();
+  } catch (e) { /* not generated yet */ }
+
+  let advancedData = { opponents_record: {}, top_player_game: {} };
+  try {
+    const res = await fetch("data/advanced_stats.json");
+    if (res.ok) advancedData = await res.json();
+  } catch (e) { /* not generated yet */ }
+
+  function careerOpponentsRecord(ownerId) {
+    let wins = 0, losses = 0, found = false;
+    for (const season of Object.keys(advancedData.opponents_record || {})) {
+      const rec = advancedData.opponents_record[season][ownerId];
+      if (rec) { wins += rec.wins; losses += rec.losses; found = true; }
+    }
+    return found ? { wins, losses } : null;
+  }
+
+  // "Place" reflects true final postseason placement (not just regular-season seed) —
+  // computed server-side by walking the playoff bracket. Shown on year views only,
+  // as the rightmost column.
+  const placeColumn = { key: "place", label: "Place", sortKey: r => r.place, fmt: r => r.place };
+
+  const baseColumns = [
+    { key: "name", label: "Manager", sortKey: r => r.name.toLowerCase(), fmt: r => `<strong>${r.name}</strong>` },
+    { key: "record", label: "Record", sortKey: r => r.win_pct, fmt: r => r.record },
+    { key: "win_pct", label: "Win %", sortKey: r => r.win_pct, fmt: r => `${(r.win_pct * 100).toFixed(1)}%` },
+    { key: "points_for", label: "Points For", sortKey: r => r.points_for, fmt: r => fmtNum(r.points_for) },
+    { key: "ppg", label: "PF/G", sortKey: r => r.ppg, fmt: r => fmtNum(r.ppg) },
+    { key: "max_pf", label: "Max Points For", sortKey: r => (r.max_pf == null ? -1 : r.max_pf), fmt: r => fmtNum(r.max_pf) },
+    { key: "max_ppg", label: "Max PPG", sortKey: r => (r.max_ppg == null ? -1 : r.max_ppg), fmt: r => fmtNum(r.max_ppg) },
+    { key: "efficiency", label: "Lineup Eff.", sortKey: r => (r.efficiency == null ? -1 : r.efficiency), fmt: r => r.efficiency == null ? "—" : `${r.efficiency.toFixed(2)}%` },
+    { key: "points_against", label: "Points Against", sortKey: r => r.points_against, fmt: r => fmtNum(r.points_against) },
+    { key: "papg", label: "PA/G", sortKey: r => r.papg, fmt: r => fmtNum(r.papg) },
+    { key: "opp_record", label: "Opponents Record", sortKey: r => r.opp_win_pct, fmt: r => r.opp_record || "—" },
+  ];
+  const careerOnlyColumns = [
+    { key: "playoff_record", label: "Playoff Rec.", sortKey: r => (r.playoff_wins - r.playoff_losses), fmt: r => r.playoff_record },
+    { key: "titles", label: "Titles", sortKey: r => r.titles, fmt: r => r.titles },
+  ];
+
+  function careerRowsFor(managerList) {
+    return managerList.map(m => {
+      const at = m.all_time;
+      const pr = m.playoff_record;
+      const eff = efficiencyData.career[m.user_id];
+      const oppRec = careerOpponentsRecord(m.user_id);
+      const maxPf = eff ? eff.max_pf : null;
+      const maxPpg = eff && eff.weeks_counted ? eff.max_pf / eff.weeks_counted : null;
+      return {
+        name: m.display_name,
+        win_pct: at.win_pct,
+        record: `${at.wins}-${at.losses}${at.ties ? `-${at.ties}` : ""}`,
+        points_for: at.points_for,
+        ppg: at.ppg,
+        max_pf: maxPf,
+        max_ppg: maxPpg,
+        efficiency: eff ? eff.efficiency_pct : null,
+        points_against: at.points_against,
+        papg: at.papg,
+        opp_record: oppRec ? `${oppRec.wins}-${oppRec.losses}` : null,
+        opp_win_pct: oppRec && (oppRec.wins + oppRec.losses) ? oppRec.wins / (oppRec.wins + oppRec.losses) : -1,
+        playoff_wins: pr.wins,
+        playoff_losses: pr.losses,
+        playoff_record: `${pr.wins}-${pr.losses}`,
+        titles: at.championships.length,
+      };
+    });
+  }
+
+  function seasonRowsFor(season) {
+    // Year views include EVERY manager who played that season, current or retired.
+    const sd = seasons[season];
+    if (!sd) return [];
+    const effForSeason = (efficiencyData.by_season && efficiencyData.by_season[season]) || {};
+    const oppForSeason = (advancedData.opponents_record && advancedData.opponents_record[season]) || {};
+    return sd.standings.map(row => {
+      const m = managerById(managers, row.owner_id);
+      const eff = effForSeason[row.owner_id];
+      const oppRec = oppForSeason[row.owner_id];
+      const maxPf = eff ? eff.max_pf : null;
+      const maxPpg = eff && eff.weeks_counted ? eff.max_pf / eff.weeks_counted : null;
+      return {
+        place: row.final_placement != null ? row.final_placement : "—",
+        name: m.display_name,
+        win_pct: row.win_pct,
+        record: `${row.wins}-${row.losses}${row.ties ? `-${row.ties}` : ""}`,
+        points_for: row.points_for,
+        ppg: row.ppg,
+        max_pf: maxPf,
+        max_ppg: maxPpg,
+        efficiency: eff ? eff.efficiency_pct : null,
+        points_against: row.points_against,
+        papg: row.papg,
+        opp_record: oppRec ? `${oppRec.wins}-${oppRec.losses}` : null,
+        opp_win_pct: oppRec && (oppRec.wins + oppRec.losses) ? oppRec.wins / (oppRec.wins + oppRec.losses) : -1,
+      };
+    });
+  }
+
+  let currentView = "career";
+  let sortState = { key: "win_pct", dir: -1 };
+  let retiredSortState = { key: "win_pct", dir: -1 };
+
+  function activeColumns() {
+    if (currentView === "career") return [...baseColumns, ...careerOnlyColumns];
+    return [...baseColumns, placeColumn]; // Place is rightmost on year views
+  }
+
+  function buildTable(rows, sState, columns) {
+    const sorted = rows.slice().sort((a, b) => {
+      const col = columns.find(c => c.key === sState.key) || columns[0];
+      const av = col.sortKey(a), bv = col.sortKey(b);
+      if (av < bv) return -1 * sState.dir;
+      if (av > bv) return 1 * sState.dir;
+      return 0;
+    });
+    const headHtml = columns.map(c => {
+      const isSorted = c.key === sState.key;
+      const arrow = isSorted ? (sState.dir === 1 ? "▲" : "▼") : "▲";
+      return `<th class="sortable${isSorted ? " sorted" : ""}" data-key="${c.key}">${c.label}<span class="arrow">${arrow}</span></th>`;
+    }).join("");
+    const bodyHtml = sorted.map(r => `<tr>${columns.map(c => `<td>${c.fmt(r)}</td>`).join("")}</tr>`).join("");
+    return { headHtml, bodyHtml };
+  }
+
+  function render() {
+    const columns = activeColumns();
+    if (!columns.find(c => c.key === sortState.key)) {
+      sortState = currentView === "career" ? { key: "win_pct", dir: -1 } : { key: "place", dir: 1 };
+    }
+    const rows = currentView === "career" ? careerRowsFor(currentManagers) : seasonRowsFor(currentView);
+    const { headHtml, bodyHtml } = buildTable(rows, sortState, columns);
+
+    wrap.innerHTML = `
+      <table>
+        <thead><tr>${headHtml}</tr></thead>
+        <tbody>${bodyHtml}</tbody>
+      </table>
+    `;
+
+    wrap.querySelectorAll("th.sortable").forEach(th => {
+      th.addEventListener("click", () => {
+        const key = th.dataset.key;
+        if (sortState.key === key) sortState.dir *= -1;
+        else sortState = { key, dir: -1 };
+        render();
+      });
+    });
+
+    renderRetired();
+  }
+
+  function renderRetired() {
+    if (currentView !== "career" || retiredManagers.length === 0) {
+      retiredSection.style.display = "none";
+      return;
+    }
+    retiredSection.style.display = "";
+    const columns = activeColumns();
+    if (!columns.find(c => c.key === retiredSortState.key)) retiredSortState = { key: "win_pct", dir: -1 };
+    const rows = careerRowsFor(retiredManagers);
+    const { headHtml, bodyHtml } = buildTable(rows, retiredSortState, columns);
+    retiredWrap.innerHTML = `
+      <table>
+        <thead><tr>${headHtml}</tr></thead>
+        <tbody>${bodyHtml}</tbody>
+      </table>
+    `;
+    retiredWrap.querySelectorAll("th.sortable").forEach(th => {
+      th.addEventListener("click", () => {
+        const key = th.dataset.key;
+        if (retiredSortState.key === key) retiredSortState.dir *= -1;
+        else retiredSortState = { key, dir: -1 };
+        renderRetired();
+      });
+    });
+  }
+
+  function renderPicker() {
+    const options = [{ key: "career", label: "Career" }, ...allSeasons.map(s => ({ key: s, label: s }))];
+    pickerEl.innerHTML = options.map(o => `<button class="season-btn${o.key === currentView ? " active" : ""}" data-view="${o.key}">${o.label}</button>`).join("");
+    pickerEl.querySelectorAll(".season-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        currentView = btn.dataset.view;
+        pickerEl.querySelectorAll(".season-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        render();
+      });
+    });
+  }
+
+  renderPicker();
+  render();
+
+  // ---- Head-to-head matrix (current managers only) ----
+  const h2hBody = document.getElementById("h2h-body");
+  let h2h = null;
+  try {
+    const res = await fetch("data/h2h.json");
+    if (res.ok) h2h = await res.json();
+  } catch (e) { /* not generated yet */ }
+
+  function renderH2H() {
+    if (!h2h || Object.keys(h2h).length === 0) {
+      h2hBody.innerHTML = `<p class="loading-note">No matchup data on file yet.</p>`;
+      return;
+    }
+    const sortedManagers = currentManagers.slice().sort((a, b) => a.display_name.localeCompare(b.display_name));
+    const headerRow = `<th></th>` + sortedManagers.map(m => `<th>${m.display_name}</th>`).join("");
+    const bodyRows = sortedManagers.map(rowM => {
+      const cells = sortedManagers.map(colM => {
+        if (rowM.user_id === colM.user_id) return `<td class="h2h-cell-self"></td>`;
+        const rec = (h2h[rowM.user_id] && h2h[rowM.user_id][colM.user_id]) || null;
+        if (!rec) return `<td>—</td>`;
+        const tieStr = rec.ties ? `-${rec.ties}` : "";
+        return `<td>${rec.wins}-${rec.losses}${tieStr}</td>`;
+      }).join("");
+      return `<tr><th>${rowM.display_name}</th>${cells}</tr>`;
+    }).join("");
+
+    h2hBody.innerHTML = `
+      <div class="table-card card">
+        <table class="h2h-table">
+          <thead><tr>${headerRow}</tr></thead>
+          <tbody>${bodyRows}</tbody>
+        </table>
+        <p class="rules-note" style="padding:12px 14px 6px;">Read as row vs. column. Shaded cells are self-matchups.</p>
+      </div>
+    `;
+  }
+
+  renderH2H();
+})();
+</script>
+</body>
+</html>

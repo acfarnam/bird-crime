@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transactions — Bird Crime</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="site-header" class="site-header"></header>
+
+<main>
+  <div class="wrap">
+    <h1 class="page-title">Transactions</h1>
+    <p class="page-lede">Every trade in league history, including multi-team deals.</p>
+
+    <div id="season-picker" class="season-picker"></div>
+
+    <div id="trade-list">
+      <p class="loading-note">Loading…</p>
+    </div>
+  </div>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/main.js"></script>
+<script src="js/data.js"></script>
+<script>
+(async function () {
+  initChrome("transactions.html");
+
+  const pickerEl = document.getElementById("season-picker");
+  const listEl = document.getElementById("trade-list");
+
+  let trades = [];
+  try {
+    const res = await fetch("data/transactions.json");
+    if (res.ok) trades = await res.json();
+  } catch (e) { /* not generated yet */ }
+
+  if (trades.length === 0) {
+    listEl.innerHTML = `<p class="loading-note">No trade data on file yet.</p>`;
+    return;
+  }
+
+  const seasons = [...new Set(trades.map(t => t.season))].sort().reverse();
+  let currentFilter = "all";
+
+  function formatDate(ms) {
+    if (!ms) return "Date unknown";
+    const d = new Date(ms);
+    return d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+  }
+
+  function render() {
+    const filtered = currentFilter === "all" ? trades : trades.filter(t => t.season === currentFilter);
+
+    if (filtered.length === 0) {
+      listEl.innerHTML = `<p class="loading-note">No trades for ${currentFilter}.</p>`;
+      return;
+    }
+
+    listEl.innerHTML = filtered.map(t => {
+      const partiesHtml = t.parties.map(p => `
+        <div class="trade-party">
+          <div class="who">${p.display_name}</div>
+          ${p.received.length ? `<div class="received"><span class="label">Received</span>${p.received.join(", ")}</div>` : ""}
+          ${p.sent.length ? `<div class="sent"><span class="label">Sent</span>${p.sent.join(", ")}</div>` : ""}
+        </div>
+      `).join("");
+
+      const weekLabel = t.week != null ? `Week ${t.week}` : "Offseason";
+
+      return `
+        <div class="card trade-card">
+          <div class="trade-meta">${t.season} &middot; ${weekLabel} &middot; ${formatDate(t.created)} &middot; ${t.num_parties}-team trade</div>
+          <div class="trade-parties">${partiesHtml}</div>
+        </div>
+      `;
+    }).join("");
+  }
+
+  function renderPicker() {
+    const options = [{ key: "all", label: "All" }, ...seasons.map(s => ({ key: s, label: s }))];
+    pickerEl.innerHTML = options.map(o => `<button class="season-btn${o.key === currentFilter ? " active" : ""}" data-season="${o.key}">${o.label}</button>`).join("");
+    pickerEl.querySelectorAll(".season-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        currentFilter = btn.dataset.season;
+        pickerEl.querySelectorAll(".season-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        render();
+      });
+    });
+  }
+
+  renderPicker();
+  render();
+})();
+</script>
+</body>
+</html>
