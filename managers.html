@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Managers — Bird Crime</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="site-header" class="site-header"></header>
+
+<main>
+  <div class="wrap">
+    <h1 class="page-title">Managers</h1>
+    <p class="page-lede">The twelve managers currently in the league.</p>
+
+    <div id="managers-grid" class="managers-grid">
+      <p class="loading-note">Loading…</p>
+    </div>
+  </div>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/main.js"></script>
+<script src="js/data.js"></script>
+<script>
+(async function () {
+  initChrome("managers.html");
+  const grid = document.getElementById("managers-grid");
+
+  let data;
+  try {
+    data = await loadLeagueData();
+  } catch (err) {
+    showError(grid);
+    return;
+  }
+
+  const { managers } = data;
+  const currentManagers = managers.filter(m => m.is_current).slice().sort((a, b) => a.display_name.localeCompare(b.display_name));
+
+  let extras = {};
+  try {
+    const res = await fetch("data/manager_extras.json");
+    if (res.ok) extras = await res.json();
+  } catch (e) { /* not present */ }
+
+  let topPlayerGame = {};
+  try {
+    const res = await fetch("data/advanced_stats.json");
+    if (res.ok) {
+      const adv = await res.json();
+      topPlayerGame = adv.top_player_game || {};
+    }
+  } catch (e) { /* not generated yet */ }
+
+  const currentTeamName = (m) => {
+    const latestSeason = Object.keys(m.seasons).sort().pop();
+    return teamNameFor(m, latestSeason);
+  };
+
+  grid.innerHTML = currentManagers.map(m => {
+    const at = m.all_time;
+    const pr = m.playoff_record;
+    const av = avatarUrl(m.avatar);
+    const seasonCount = Object.keys(m.seasons).length;
+    const favTeam = (extras[m.user_id] && extras[m.user_id].favorite_nfl_team) || null;
+    const realName = (extras[m.user_id] && extras[m.user_id].real_name) || null;
+    const tpg = topPlayerGame[m.user_id];
+
+    const trophyBadges = at.championships.map(year => `<span class="trophy-badge">🏆 ${year}</span>`).join("");
+
+    return `
+      <a class="card manager-profile-card" href="manager.html?id=${m.user_id}">
+        <div class="manager-profile-header">
+          <div class="manager-profile-avatar">${av ? `<img src="${av}" alt="">` : initials(m.display_name)}</div>
+          <div>
+            <h3>${realName ? `${realName} - ${m.display_name}` : m.display_name}</h3>
+            <div class="team">"${currentTeamName(m)}"</div>
+          </div>
+        </div>
+
+        <div class="trophy-case">
+          <p class="trophy-case-label">Trophy Case</p>
+          <div class="trophy-badges">${trophyBadges || '<span class="none">No championships yet</span>'}</div>
+        </div>
+
+        <table class="manager-stat-table">
+          <tr><td>Since / Seasons</td><td>${m.first_season} &middot; ${seasonCount}</td></tr>
+          <tr><td>All-Time Record</td><td>${at.wins}-${at.losses}${at.ties ? `-${at.ties}` : ""} (${(at.win_pct * 100).toFixed(1)}%)</td></tr>
+          <tr><td>Playoff Record</td><td>${pr.wins}-${pr.losses}</td></tr>
+          <tr><td>Championships</td><td>${at.championships.length}</td></tr>
+          <tr><td>Top Player Game</td><td>${tpg ? `${tpg.player_name} &mdash; ${tpg.points} (${tpg.season})` : "—"}</td></tr>
+          <tr><td>Favorite NFL Team</td><td>${favTeam || "—"}</td></tr>
+        </table>
+      </a>
+    `;
+  }).join("");
+})();
+</script>
+</body>
+</html>

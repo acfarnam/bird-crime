@@ -1,0 +1,91 @@
+{
+  "through_week": 9,
+  "playoff_seeding": [
+    {
+      "seed": 1,
+      "team": "Rome Wznt Built in Odunze",
+      "manager": "satterfieldaz",
+      "record": "7-1-1",
+      "points_for": 1303.3,
+      "tiebreak": ""
+    },
+    {
+      "seed": 2,
+      "team": "Honey, I\u2019m Mahomes",
+      "manager": "BadmanHoots",
+      "record": "6-3",
+      "points_for": 1044.28,
+      "tiebreak": ""
+    },
+    {
+      "seed": 3,
+      "team": "Egbuka Bukkake",
+      "manager": "GingerBeard40",
+      "record": "5-4",
+      "points_for": 1345.44,
+      "tiebreak": "Head-to-head"
+    },
+    {
+      "seed": 4,
+      "team": "Whatre u doin step Burrow",
+      "manager": "BromanXVIII",
+      "record": "5-4",
+      "points_for": 1244.22,
+      "tiebreak": "Points for"
+    },
+    {
+      "seed": 5,
+      "team": "The Gofffather",
+      "manager": "Dirico32",
+      "record": "5-4",
+      "points_for": 1157.92,
+      "tiebreak": "Points for"
+    },
+    {
+      "seed": 6,
+      "team": "SHITTY TIMING",
+      "manager": "reedjamesjr",
+      "record": "5-4",
+      "points_for": 1019.24,
+      "tiebreak": "Head-to-head"
+    }
+  ],
+  "top_picks": [
+    {
+      "pick": 1,
+      "team": "Cam i get a witness",
+      "manager": "ChickenChooker",
+      "max_pf": 1089.48
+    },
+    {
+      "pick": 2,
+      "team": "British Broncos",
+      "manager": "conlure",
+      "max_pf": 1301.98
+    },
+    {
+      "pick": 3,
+      "team": "Ben Johnson\u2019s SoggyBottom",
+      "manager": "Hootsjr",
+      "max_pf": 1309.38
+    },
+    {
+      "pick": 4,
+      "team": "Smitty City",
+      "manager": "DickSlaughter69",
+      "max_pf": 1372.44
+    },
+    {
+      "pick": 5,
+      "team": "Love at First Sight",
+      "manager": "MrBroadbent13",
+      "max_pf": 1392.72
+    },
+    {
+      "pick": 6,
+      "team": "Drunk Darts",
+      "manager": "youngshledon",
+      "max_pf": 1412.96
+    }
+  ]
+}

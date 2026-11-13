@@ -1,0 +1,300 @@
+{
+  "by_season": {
+    "2024": {
+      "576591884302987264": {
+        "efficiency_pct": 88.68,
+        "actual_points": 1660.06,
+        "max_pf": 1871.98,
+        "weeks_counted": 14
+      },
+      "606214229866909696": {
+        "efficiency_pct": 85.75,
+        "actual_points": 1352.06,
+        "max_pf": 1576.7,
+        "weeks_counted": 14
+      },
+      "410257586844073984": {
+        "efficiency_pct": 91.42,
+        "actual_points": 1862.06,
+        "max_pf": 2036.76,
+        "weeks_counted": 14
+      },
+      "604558405637562368": {
+        "efficiency_pct": 83.93,
+        "actual_points": 1731.78,
+        "max_pf": 2063.46,
+        "weeks_counted": 14
+      },
+      "426481399462117376": {
+        "efficiency_pct": 87.07,
+        "actual_points": 1639.04,
+        "max_pf": 1882.4,
+        "weeks_counted": 14
+      },
+      "470768656427511808": {
+        "efficiency_pct": 83.08,
+        "actual_points": 1986.66,
+        "max_pf": 2391.36,
+        "weeks_counted": 14
+      },
+      "531218982082400256": {
+        "efficiency_pct": 83.01,
+        "actual_points": 1798.64,
+        "max_pf": 2166.68,
+        "weeks_counted": 14
+      },
+      "657042154346082304": {
+        "efficiency_pct": 83.14,
+        "actual_points": 1784.74,
+        "max_pf": 2146.66,
+        "weeks_counted": 14
+      },
+      "992430958571819008": {
+        "efficiency_pct": 91.03,
+        "actual_points": 1913.26,
+        "max_pf": 2101.8,
+        "weeks_counted": 14
+      },
+      "992221996681412608": {
+        "efficiency_pct": 85.92,
+        "actual_points": 1827.32,
+        "max_pf": 2126.7,
+        "weeks_counted": 14
+      },
+      "81600624009297920": {
+        "efficiency_pct": 83.24,
+        "actual_points": 1827.84,
+        "max_pf": 2195.88,
+        "weeks_counted": 14
+      },
+      "991866326018736128": {
+        "efficiency_pct": 84.29,
+        "actual_points": 1947.46,
+        "max_pf": 2310.5,
+        "weeks_counted": 14
+      }
+    },
+    "2025": {
+      "576591884302987264": {
+        "efficiency_pct": 89.31,
+        "actual_points": 1933.72,
+        "max_pf": 2165.12,
+        "weeks_counted": 14
+      },
+      "606214229866909696": {
+        "efficiency_pct": 90.31,
+        "actual_points": 1640.0,
+        "max_pf": 1815.96,
+        "weeks_counted": 14
+      },
+      "410257586844073984": {
+        "efficiency_pct": 86.25,
+        "actual_points": 1742.66,
+        "max_pf": 2020.42,
+        "weeks_counted": 14
+      },
+      "604558405637562368": {
+        "efficiency_pct": 85.15,
+        "actual_points": 1819.9,
+        "max_pf": 2137.22,
+        "weeks_counted": 14
+      },
+      "426481399462117376": {
+        "efficiency_pct": 83.94,
+        "actual_points": 1778.4,
+        "max_pf": 2118.68,
+        "weeks_counted": 14
+      },
+      "470768656427511808": {
+        "efficiency_pct": 82.64,
+        "actual_points": 1780.0,
+        "max_pf": 2153.96,
+        "weeks_counted": 14
+      },
+      "531218982082400256": {
+        "efficiency_pct": 85.74,
+        "actual_points": 2010.5,
+        "max_pf": 2344.78,
+        "weeks_counted": 14
+      },
+      "657042154346082304": {
+        "efficiency_pct": 83.55,
+        "actual_points": 1511.64,
+        "max_pf": 1809.22,
+        "weeks_counted": 14
+      },
+      "992430958571819008": {
+        "efficiency_pct": 87.27,
+        "actual_points": 1839.92,
+        "max_pf": 2108.28,
+        "weeks_counted": 14
+      },
+      "992221996681412608": {
+        "efficiency_pct": 89.63,
+        "actual_points": 1958.42,
+        "max_pf": 2184.9,
+        "weeks_counted": 14
+      },
+      "81600624009297920": {
+        "efficiency_pct": 77.81,
+        "actual_points": 1575.82,
+        "max_pf": 2025.32,
+        "weeks_counted": 14
+      },
+      "991866326018736128": {
+        "efficiency_pct": 80.74,
+        "actual_points": 1622.32,
+        "max_pf": 2009.26,
+        "weeks_counted": 14
+      }
+    },
+    "2026": {
+      "576591884302987264": {
+        "efficiency_pct": 81.62,
+        "actual_points": 1044.28,
+        "max_pf": 1279.44,
+        "weeks_counted": 9
+      },
+      "606214229866909696": {
+        "efficiency_pct": 84.91,
+        "actual_points": 1194.6,
+        "max_pf": 1406.82,
+        "weeks_counted": 10
+      },
+      "410257586844073984": {
+        "efficiency_pct": 83.99,
+        "actual_points": 931.9,
+        "max_pf": 1109.6,
+        "weeks_counted": 10
+      },
+      "604558405637562368": {
+        "efficiency_pct": 87.55,
+        "actual_points": 1219.06,
+        "max_pf": 1392.34,
+        "weeks_counted": 10
+      },
+      "426481399462117376": {
+        "efficiency_pct": 83.47,
+        "actual_points": 1092.88,
+        "max_pf": 1309.38,
+        "weeks_counted": 9
+      },
+      "470768656427511808": {
+        "efficiency_pct": 80.86,
+        "actual_points": 1183.62,
+        "max_pf": 1463.8,
+        "weeks_counted": 10
+      },
+      "531218982082400256": {
+        "efficiency_pct": 82.98,
+        "actual_points": 1083.48,
+        "max_pf": 1305.68,
+        "weeks_counted": 10
+      },
+      "657042154346082304": {
+        "efficiency_pct": 81.98,
+        "actual_points": 1159.86,
+        "max_pf": 1414.86,
+        "weeks_counted": 10
+      },
+      "992430958571819008": {
+        "efficiency_pct": 82.84,
+        "actual_points": 1019.24,
+        "max_pf": 1230.36,
+        "weeks_counted": 10
+      },
+      "992221996681412608": {
+        "efficiency_pct": 88.09,
+        "actual_points": 1330.0,
+        "max_pf": 1509.74,
+        "weeks_counted": 10
+      },
+      "81600624009297920": {
+        "efficiency_pct": 87.33,
+        "actual_points": 1379.1,
+        "max_pf": 1579.16,
+        "weeks_counted": 10
+      },
+      "991866326018736128": {
+        "efficiency_pct": 90.27,
+        "actual_points": 1261.52,
+        "max_pf": 1397.46,
+        "weeks_counted": 10
+      }
+    }
+  },
+  "career": {
+    "576591884302987264": {
+      "efficiency_pct": 87.24,
+      "actual_points": 4638.06,
+      "max_pf": 5316.54,
+      "weeks_counted": 37
+    },
+    "606214229866909696": {
+      "efficiency_pct": 87.23,
+      "actual_points": 4186.66,
+      "max_pf": 4799.48,
+      "weeks_counted": 38
+    },
+    "410257586844073984": {
+      "efficiency_pct": 87.8,
+      "actual_points": 4536.62,
+      "max_pf": 5166.78,
+      "weeks_counted": 38
+    },
+    "604558405637562368": {
+      "efficiency_pct": 85.3,
+      "actual_points": 4770.74,
+      "max_pf": 5593.02,
+      "weeks_counted": 38
+    },
+    "426481399462117376": {
+      "efficiency_pct": 84.93,
+      "actual_points": 4510.32,
+      "max_pf": 5310.46,
+      "weeks_counted": 37
+    },
+    "470768656427511808": {
+      "efficiency_pct": 82.38,
+      "actual_points": 4950.28,
+      "max_pf": 6009.12,
+      "weeks_counted": 38
+    },
+    "531218982082400256": {
+      "efficiency_pct": 84.11,
+      "actual_points": 4892.62,
+      "max_pf": 5817.14,
+      "weeks_counted": 38
+    },
+    "657042154346082304": {
+      "efficiency_pct": 82.97,
+      "actual_points": 4456.24,
+      "max_pf": 5370.74,
+      "weeks_counted": 38
+    },
+    "992430958571819008": {
+      "efficiency_pct": 87.72,
+      "actual_points": 4772.42,
+      "max_pf": 5440.44,
+      "weeks_counted": 38
+    },
+    "992221996681412608": {
+      "efficiency_pct": 87.88,
+      "actual_points": 5115.74,
+      "max_pf": 5821.34,
+      "weeks_counted": 38
+    },
+    "81600624009297920": {
+      "efficiency_pct": 82.46,
+      "actual_points": 4782.76,
+      "max_pf": 5800.36,
+      "weeks_counted": 38
+    },
+    "991866326018736128": {
+      "efficiency_pct": 84.5,
+      "actual_points": 4831.3,
+      "max_pf": 5717.22,
+      "weeks_counted": 38
+    }
+  }
+}

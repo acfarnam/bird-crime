@@ -1,0 +1,98 @@
+{
+  "league_name": "Bird Crime",
+  "total_seasons": 3,
+  "seasons_completed": [
+    "2024",
+    "2025"
+  ],
+  "current_season": "2026",
+  "champions_by_year": {
+    "2024": {
+      "owner_id": "991866326018736128",
+      "display_name": "BromanXVIII",
+      "team_name": "Kicker? Hardly knew her",
+      "record": "10-4"
+    },
+    "2025": {
+      "owner_id": "576591884302987264",
+      "display_name": "BadmanHoots",
+      "team_name": "Honey, I'm Mahomes",
+      "record": "11-3"
+    }
+  },
+  "podium_by_year": {
+    "2024": {
+      "champion": "BromanXVIII",
+      "runner_up": "reedjamesjr",
+      "third": "GingerBeard40"
+    },
+    "2025": {
+      "champion": "BadmanHoots",
+      "runner_up": "Dirico32",
+      "third": "conlure"
+    }
+  },
+  "wall_of_shame": [
+    {
+      "season": "2024",
+      "owner_id": "606214229866909696",
+      "display_name": "MrBroadbent13",
+      "team_name": "The Stroud Goes Wild",
+      "record": "0-14",
+      "points_for": 1352.06
+    },
+    {
+      "season": "2025",
+      "owner_id": "657042154346082304",
+      "display_name": "youngshledon",
+      "team_name": "Drunk Darts",
+      "record": "1-13",
+      "points_for": 1511.64
+    }
+  ],
+  "league_history_notes": {},
+  "championships_table": [
+    {
+      "display_name": "BromanXVIII",
+      "titles": 1,
+      "years": [
+        "2024"
+      ],
+      "is_current": true
+    },
+    {
+      "display_name": "BadmanHoots",
+      "titles": 1,
+      "years": [
+        "2025"
+      ],
+      "is_current": true
+    }
+  ],
+  "superlatives": {
+    "most_titles": {
+      "display_name": "BadmanHoots & BromanXVIII",
+      "value": 1
+    },
+    "most_playoff_wins": {
+      "display_name": "GingerBeard40 & ChickenChooker & Dirico32 & BadmanHoots & BromanXVIII & reedjamesjr",
+      "value": 2
+    },
+    "best_win_pct": {
+      "display_name": "ChickenChooker & conlure",
+      "value": "64.3%"
+    },
+    "highest_career_ppg": {
+      "display_name": "conlure",
+      "value": 136.01
+    },
+    "best_regular_season": {
+      "display_name": "conlure & BadmanHoots",
+      "value": "11-3 (2025)"
+    },
+    "highest_scoring_season": {
+      "display_name": "conlure",
+      "value": "2,010.50 pts (2025)"
+    }
+  }
+}
